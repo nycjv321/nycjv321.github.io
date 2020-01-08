@@ -67,7 +67,7 @@ Integration testing is the act of testing multiple units of code at once. _What 
 
 This ambigiouty is a double edged sword. Ultimately, it's up to you the software practitioner to define what they mean to you and your team. 
 
-I tend to treat integration tests as slimmed down system tests where I codify contracts at api boundries and test in a reliable and consistent way where I swap out unreliable and non-determistic components with ones that adhere to those component's contract's but whose test-friendly implementations allow my teams to more efficienly test their code and and workflows always trying to test the non-determinist and complex nature of the systems. 
+I tend to treat integration tests as slimmed down system tests where I codify contracts at api boundries. And design my test " plumbing" where I swap out unreliable and non-determistic components with ones that adhere to those component's contract's but are test-friendly implementations that allow my teammates to more efficienly test their code and and workflows without having to always test the non-determinist and complex nature of the systems.
 
 I've noticed that this sentiment isn't shared by a lot of folks. But I've found if you start breaking down your system into smaller digestible chunks and the interactions between them as codifiable contracts and test those contracts - testing and developing becomes much easier, faster, and a little more fun.
 
