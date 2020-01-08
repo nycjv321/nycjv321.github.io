@@ -22,7 +22,7 @@ This is a first part of a multi-part series where were explore the traditional t
 
 The testing pyramid is a concept originally described by Mike Cohn in his book _Succeeding with Agile_. Today there are many forms of the testing pyramid. The traditional pyramid consists of three tiers: UI (at the top), Service/API (in the middle) and Unit (at the bottom). The idea being that the majority of your tests are unit tests and your UI test suites being the smallest. 
 
-There have been other versions of the testing pyramid. For our purporses, let's consider these three forms of testing: 
+There have been other versions of the testing pyramid. For our purposes, let's consider these three forms of testing: 
 1. unit
 1. integration
 1. system 
