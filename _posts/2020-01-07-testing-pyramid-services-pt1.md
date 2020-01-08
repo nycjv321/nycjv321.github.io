@@ -90,7 +90,7 @@ These are your slowest but most thorough form of tests. System tests are a black
 
 _Why does email not work? Is it broken?!? ... No we just didn't configure it..._
 
-I've seen great amount of emphasis on system tests when many verifications can be placed lower down the stack as integration tests or unit tests. Before you write that (unnecessarily) complicated system test (e.g. a UI test or testing a RESTful api against an external service) ask yourself or the developer writing the featutre if they wrote tests for the feature and what kind of tests. These sort of conversations will be covered in later articles.
+I've seen great amount of emphasis on system tests when many verifications can be placed lower down the stack as integration tests or unit tests. Before you write that (unnecessarily) complicated system test (e.g. a UI test or testing a RESTful api against an external service) ask yourself or the developer writing the future if they wrote tests and what kind of tests. These sort of conversations will be covered in later articles.
 
 ##### Pros
 1. Allows for expressing complex user scenarios
