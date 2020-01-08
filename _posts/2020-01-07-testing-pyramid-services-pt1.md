@@ -16,7 +16,7 @@ _What exactly is the testing pyramid? What is the difference between an integrat
 
 ### About the Series
 
-This is a first part of a multi-part series where were explore the traditional testing pyramid, challenge it, and try and answer common question about testing and how they fit into the testing pyramid. 
+This is a first part of a multi-part series where were explore the traditional testing pyramid, challenge it, and try and answer common questions about testing. 
 
 ## What is the Testing Pyramid?
 
