@@ -2,13 +2,6 @@
 layout: post
 title: Hello World
 subtitle: Hello World
-gh-repo: daattali/beautiful-jekyll
-gh-badge:
-  - star
-  - fork
-  - follow
-tags:
-  - test
 comments: false
 published: true
 date: '2020-01-07'
