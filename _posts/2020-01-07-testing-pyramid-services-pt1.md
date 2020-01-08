@@ -86,7 +86,7 @@ I've noticed that this sentiment isn't shared by a lot of folks. But I've found 
 
 #### System Tests
 
-These are your slowest but most thorough form of tests. System tests are a black box or a grey box form of testing when you interface with a running and fully provisioned system. This is great since it tests everything. But at the same time it's not ideal since you are testing everything at the same time everytime. They are also non-determinist in nature. Things fail in environments that don't get the same TLC as production and not understood by stakeholders other than those that provisioned them. 
+These are your slowest but most thorough form of tests. System tests are a black box form of testing when you interface with a running and fully provisioned system. This is great since it tests everything. But at the same time it's not ideal since you are testing everything at the same time everytime. They are also non-determinist in nature. Things fail in environments that don't get the same TLC as production and not understood by stakeholders other than those that provisioned them. 
 
 _Why does email not work? Is it broken?!? ... No we just didn't configure it..._
 
