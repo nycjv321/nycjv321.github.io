@@ -65,7 +65,7 @@ Integration testing is the act of testing multiple units of code at once. _What 
 * end-to-end testing (those are a lot of functions 😄)
 * testing your backend's internal _service_ layer mocking out a database (or not) 
 
-This ambigiouty is a double edged sword. Ultimately, it's up to you the software practitioner to define what they mean to you and your team. 
+This ambigiouty is a double edged sword. Ultimately it's up to you, the software practitioner, to define what they mean to you and your team. 
 
 I tend to treat integration tests as slimmed down system tests where my tests functiotn as codified contracts at api boundries. I design my test's "plumbing" in such a way where I swap out unreliable and non-determistic components with ones that adhere to those component's contract's and are test-friendly implementations that allow my teammates to more efficienly test functionality and workflows without having to always test the non-deterministic and complex nature of the systems. Those unreliable and non-deterministic components are tested in isolation and their _interesting_ behaviors is understood and documented. But we don't allow their _interesting_ behavior to adjust our approach to testing the rest of our apps.
 
