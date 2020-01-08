@@ -22,7 +22,7 @@ This is a first part of a multi-part series where were explore the traditional t
 
 The testing pyramid is a concept originally described by Mike Cohn in his book _Succeeding with Agile_. Today there are many forms of the testing pyramid. The traditional pyramid consists of three tiers: UI (at the top), Service/API (in the middle) and Unit (at the bottom). The idea being that the majority of your tests are unit tests and your UI test suites being the smallest. 
 
-There have been other versions of the testing pyramid. I look at at tests in three forms: 1) unit 2) integration and 3) system and not necessarily as a traditional pyramid - maybe something more as composible and moldable. Sometimes more unit tests aren't a good thing.
+There have been other versions of the testing pyramid. I look at at tests in three forms: 1) unit 2) integration and 3) system and not necessarily as a traditional pyramid - maybe something more as configurable and that you can suite based on your needs. I still call it the testing pyramid. But if you want... we can call it something else. How about the _Testing Stack_ or _Testing Pyramid-like_? Meh... Let's stick with testing pyramid for now. And for the record: Sometimes more unit tests aren't a good thing. More on that later.
 
 #### Unit Testing
 Unit tests are tests that test individual functions. 
@@ -60,7 +60,7 @@ This ambigiouty is a double edged sword. Ultimately, it's up to you the software
 
 I tend to treat integration tests as slimmed down system tests where I codify contracts at api boundries and test in a reliable and consistent way where I swap out unreliable and non-determistic components with ones that adhere to those component's contract's but whose test-friendly implementations allow my teams to more efficienly test their code and and workflows always trying to test the non-determinist and complex nature of the systems. 
 
-I've noticed that this sentiment isn't shared by a lot of folks. But I've found if you start breaking down your system into smaller digestable chunks and the interactions between them as codifiable contracts and test those contracts - testing and developing becomes much easier, faster, and a little more fun.
+I've noticed that this sentiment isn't shared by a lot of folks. But I've found if you start breaking down your system into smaller digestible chunks and the interactions between them as codifiable contracts and test those contracts - testing and developing becomes much easier, faster, and a little more fun.
 
 ##### Pros
 1. Allows for expressing complex user scenarios
