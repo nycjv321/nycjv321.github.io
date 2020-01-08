@@ -61,7 +61,7 @@ This ambigiouty is a double edged sword. Ultimately, it's up to you the software
 
 I tend to treat integration tests as slimmed down system tests where I codify contracts at api boundries and test in a reliable and consistent way where I swap out unreliable and non-determistic components with ones that adhere to those component's contract's but whose test-friendly implementations allow my teams to more efficienly test their code and and workflows always trying to test the non-determinist and complex nature of the systems. 
 
-I've found that tthis sentiment isn't shared by a lot of folks. But I've found if you start breaking down your system into smaller digestable chunks and the interactions between them as codifiable contracts and test those contracts - testing and developing becomes much easier, faster, and a little more fun.
+I've noticed that this sentiment isn't shared by a lot of folks. But I've found if you start breaking down your system into smaller digestable chunks and the interactions between them as codifiable contracts and test those contracts - testing and developing becomes much easier, faster, and a little more fun.
 
 ##### Pros
 1. Allows for expressing complex user scenarios
