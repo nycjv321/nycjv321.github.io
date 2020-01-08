@@ -22,7 +22,7 @@ This is a first part of a multi-part series where were explore the traditional t
 
 ### What is the testing pyramid?
 
-The testing pyramid is a concept originally described by Mike Cohn in his book _Succeeding with Agile_. Today there are many forms of it. The traditional pyramid consists of three tiers: UI (at the top), Service/API (in the middle) and Unit (at the bottom). The idea being that the majority of your tests are unit tests and your UI test suites being the smallest. 
+The testing pyramid is a concept originally described by Mike Cohn in his book _Succeeding with Agile_. Today there are many forms of the testing pyramid. The traditional pyramid consists of three tiers: UI (at the top), Service/API (in the middle) and Unit (at the bottom). The idea being that the majority of your tests are unit tests and your UI test suites being the smallest. 
 
 There have been other versions of the testing pyramid. I look at at tests in three forms: 1) unit 2) integration and 3) system and not necessarily as a traditional pyramid. But as composible and moldable blocks. Sometimes more unit tests aren't a good thing.
 
@@ -40,20 +40,28 @@ Unit tests are great for many reasons:
 1. consistent 
 
 ##### Cons
-But if you've ever written a lot of them you always run into some of the problems I'll list:
+But if you've ever written a lot of unit tests you may have run into some of the problems listed:
 
-1. coupling of tests with implementation
+1. coupling of tests with implementation (resulting in a lot of refactoring as requirements change)
 1. hard to test from the user perspective
 1. hard to test complicated workflows
 1. provides fake confidence in functionality (_I wrote a bunch of unit tests!?! ... but they didn't really test the thing you did in the database_)
 
-I've found that unit tests are great in certain situtations. When you want to test individual functions and algorithms. They let you quickly answer questions: does `my_cool_function(foo: any)` actually return `bar: Thing`? It doesn't make much sense to write a complete system test for this. But at the same time it depends on what `my_cool_function` is doing and where it's being used in your application's stack. This leads me to my next, and favorite, form of testing
+I've found that unit tests are great in certain situtations. When you want to test individual functions and algorithms. They let you quickly answer questions: does `my_cool_function(foo: any)` actually return `bar: Thing`? It doesn't make much sense to write a complete system test for this. But at the same time it depends on what `my_cool_function` is doing and where it's being used in your application's stack. This leads me to my next, and favorite, form of testing.
 
 #### Integration Testing
 
-Integration testing is the act of testing multiple units of code at once. _What does this really mean?_ Well it depends. It really is up to you. I would argue anything that isn't a unit test can be considered integration tests. API Tests are a form of integration tests and so are system tests. 
+Integration testing is the act of testing multiple units of code at once. _What does this really mean?_ Well it depends. It really is up to you. I would argue anything that isn't a unit test can be considered integration tests. Modern software is complicated and consist of countless number of nested and interrelated fucntions. So it becomes a point of further classification, for example: api testing, greybox testing, system testings. Some examples of integration tests that come to mind:
 
-This ambigiouty is a double edged sword. Ultimately, it's up to you the software practitioner to define what they mean to your and your team. I tend to view integration tests as slimmed down system tests where I codify contracts at api boudries. This sentimate isn't shared by a lot of folks. But I've found if you start breaking down your system into functional areas and interactions between them as codifiable contracts and test those contracts - testing and developing becomes much easier.
+* testing a function that depends on many more functions
+* end-to-end testing (those are a lot of functions 😄)
+* testing your backend's internal _service_ layer mocking out a database (or not) 
+
+This ambigiouty is a double edged sword. Ultimately, it's up to you the software practitioner to define what they mean to your and your team. 
+
+I tend to treat integration tests as slimmed down system tests where I codify contracts at api boundries and test in a reliable and consistent way where I swap out unreliable and non-determistic components with ones that adhere to those component's contract's but whose test-friendly implementations allow my teams to more efficienly test their code and and workflows always trying to test the non-determinist and complex nature of the systems. 
+
+I've found that tthis sentiment isn't shared by a lot of folks. But I've found if you start breaking down your system into smaller digestable chunks and the interactions between them as codifiable contracts and test those contracts - testing and developing becomes much easier, faster, and a little more fun.
 
 ##### Pros
 1. Allows for expressing complex user scenarios
@@ -69,7 +77,7 @@ This ambigiouty is a double edged sword. Ultimately, it's up to you the software
 
 #### System Tests
 
-These are your slowest form but most thorough form of tests. System tests are a black box or a grey box form of testing when you interface a running fully provisioned system. This is great since it tests everything. But at the same time it's not ideal since you are testing everything at the same time everytime. They are also non-determinist in nature. Things fail in environments that don't get the same TLC as production and not undesrtood by stakeholders other than those that provisioned them. _Why does email not work? Is it broken?!? ... No we just didn't configure it_ 
+These are your slowest form but most thorough form of tests. System tests are a black box or a grey box form of testing when you interface with a running and fully provisioned system. This is great since it tests everything. But at the same time it's not ideal since you are testing everything at the same time everytime. They are also non-determinist in nature. Things fail in environments that don't get the same TLC as production and not undesrtood by stakeholders other than those that provisioned them. _Why does email not work? Is it broken?!? ... No we just didn't configure it_ 
 
 I've seen great amount of emphasis on system tests when many verifications can be placed lower down the stack as integration tests or unit tests. Before you write that (unnecassairly) complicated system test (e.g. a UI test or testing a RESTful api against an external service) ask yourself or your colleague if they wrote tests for the feature and what kind of tests. 
 
