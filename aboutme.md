@@ -2,15 +2,14 @@
 layout: page
 title: About me
 subtitle: Why you'd want to go on a date with me
+published: true
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+I'm Javier Luis Velasquez. I'm a software practioner. 
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+Ask me about DevOps and the Testing Pyramid.
 
-What else do you need?
+When I'm not talking about testing and devops with developers, I'm busy propogating succulents or reading.
 
-### my history
 
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](http://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+I started my professional career in 2011. I've functioned many roles in technology for almost a decade. I've been called Test Automation Engineer, Developer, and SDET.
