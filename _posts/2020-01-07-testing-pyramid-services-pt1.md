@@ -71,7 +71,7 @@ This ambigiouty is a double edged sword. Ultimately, it's up to you the software
 
 These are your slowest form but most thorough form of tests. System tests are a black box or a grey box form of testing when you interface a running fully provisioned system. This is great since it tests everything. But at the same time it's not ideal since you are testing everything at the same time everytime. They are also non-determinist in nature. Things fail in environments that don't get the same TLC as production and not undesrtood by stakeholders other than those that provisioned them. _Why does email not work? Is it broken?!? ... No we just didn't configure it_ 
 
-I've seen great amount of emphasis on system tests when many verifications can be placed lower down the stack as integration tests or unit tests. The next time you are writing a system test (e.g. a UI test or testing a RESTful api against an external service) ask yourself or your colleuge if they wrote tests for the feature and what kind of tests. 
+I've seen great amount of emphasis on system tests when many verifications can be placed lower down the stack as integration tests or unit tests. Before you write that (unnecassairly) complicated system test (e.g. a UI test or testing a RESTful api against an external service) ask yourself or your colleague if they wrote tests for the feature and what kind of tests. 
 
 ##### Pros
 1. Allows for expressing complex user scenarios
