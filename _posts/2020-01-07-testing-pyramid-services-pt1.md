@@ -1,7 +1,7 @@
 ---
 layout: post
-title: The Testing Pyramid Series (Part 1)
-subtitle: What is the Testing Pyramid?
+title: What is the Testing Pyramid?
+subtitle: The Testing Pyramid Series (Part 1)
 tags:
   - testing
   - testing pyramid
@@ -12,9 +12,9 @@ date: '2020-01-07'
 ---
 
 ## The Testing Pyramid Series
-_What exactly is the testing pyramid? What is the difference between an integration test and a system test? Are system tests integration tests? When should I be writing unit tests and when shoulde I be writing integration tests? Can I write too many tests? Are all tests useful? Why even test?_ 
+_What exactly is the testing pyramid? What is the difference between an integration test and a system test? Are system tests integration tests? When should I be writing unit tests and when should I be writing integration tests? Can I write too many tests? Are all tests useful? Why even test at all?_ 
 
-### About
+### About the Series
 
 This is a first part of a multi-part series where were explore the traditional testing pyramid, challenge it, and try and answer common question about testing and how they fit into the testing pyramid. 
 
