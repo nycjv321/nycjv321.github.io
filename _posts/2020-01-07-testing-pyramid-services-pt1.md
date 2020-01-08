@@ -78,6 +78,7 @@ I've noticed that this sentiment isn't shared by a lot of folks. But I've found 
 1. Allows you to do black box, white box, or grey box testing depending on your needs
 1. Allows you to test from the user's perspective
 1. Biggest bang for your buck
+
 ##### Cons
 1. Integration tests vary between systems, tech stacks, and companies. Some companies write integration tests that mock out large part of systemts largely invalidating the whole point of testing
 1. Can be slow if written inefficiently (e.g. reprovisioning systems for each test)
@@ -97,6 +98,7 @@ I've seen great amount of emphasis on system tests when many verifications can b
 1. Allows you to test as the end user
 1. Thorough
 1. Allows you to do testing with external systems 
+
 ##### Cons
 1. Slow
 1. Nondeterminstic
