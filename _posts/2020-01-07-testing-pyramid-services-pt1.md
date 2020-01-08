@@ -77,7 +77,9 @@ I've noticed that this sentiment isn't shared by a lot of folks. But I've found 
 
 #### System Tests
 
-These are your slowest form but most thorough form of tests. System tests are a black box or a grey box form of testing when you interface with a running and fully provisioned system. This is great since it tests everything. But at the same time it's not ideal since you are testing everything at the same time everytime. They are also non-determinist in nature. Things fail in environments that don't get the same TLC as production and not undesrtood by stakeholders other than those that provisioned them. _Why does email not work? Is it broken?!? ... No we just didn't configure it_ 
+These are your slowest form but most thorough form of tests. System tests are a black box or a grey box form of testing when you interface with a running and fully provisioned system. This is great since it tests everything. But at the same time it's not ideal since you are testing everything at the same time everytime. They are also non-determinist in nature. Things fail in environments that don't get the same TLC as production and not undesrtood by stakeholders other than those that provisioned them. 
+
+_Why does email not work? Is it broken?!? ... No we just didn't configure it_ 
 
 I've seen great amount of emphasis on system tests when many verifications can be placed lower down the stack as integration tests or unit tests. Before you write that (unnecassairly) complicated system test (e.g. a UI test or testing a RESTful api against an external service) ask yourself or your colleague if they wrote tests for the feature and what kind of tests. 
 
