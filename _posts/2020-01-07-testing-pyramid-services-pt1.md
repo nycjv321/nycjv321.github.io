@@ -48,7 +48,7 @@ Unit tests are great for many reasons:
 1. cheap
 
 ##### Cons
-But if you've ever written a lot of unit tests you may have run into some of the problems listed:
+But if you've ever written a lot of unit tests you may have run into some of the problems listed below:
 
 1. coupling of tests with implementation (resulting in a lot of refactoring as requirements change)
 1. hard to test from the user perspective
@@ -83,7 +83,6 @@ I've noticed that this sentiment isn't shared by a lot of folks. But I've found 
 1. Integration tests vary between systems, tech stacks, and companies. Some companies write integration tests that mock out large part of systemts largely invalidating the whole point of testing
 1. Can be slow if written inefficiently (e.g. reprovisioning systems for each test)
 1. coupling of tests with implementation
-
 
 #### System Tests
 
