@@ -50,7 +50,7 @@ I've found that unit tests are great in certain situtations. When you want to te
 
 #### Integration Testing
 
-Integration testing is the act of testing multiple units of code at once. _What does this really mean?_ Well it depends. It really is up to you. I would argue anything that isn't a unit test can be considered integration tests. Modern software is complicated and consist of countless number of nested and interrelated fucntions. So it becomes a point of further classification, for example: api testing, greybox testing, system testings. Some examples of integration tests that come to mind:
+Integration testing is the act of testing multiple units of code at once. _What does this really mean?_ Well it depends. It really is up to you. I would argue anything that isn't a unit test can be considered a form of integration testing. Modern software is complicated and consists of countless number of nested and interrelated functions. So it becomes a point of further classification, for example: api testing, greybox testing, system testings. Some examples of integration tests that come to mind:
 
 * testing a function that depends on many more functions
 * end-to-end testing (those are a lot of functions 😄)
