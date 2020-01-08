@@ -7,7 +7,7 @@ tags:
   - testing pyramid
   - automation
 comments: false
-published: false
+published: true
 date: '2020-01-07'
 ---
 
@@ -18,7 +18,7 @@ _What exactly is the testing pyramid? What is the difference between an integrat
 
 This is a first part of a multi-part series where were explore the traditional testing pyramid, challenge it, and try and answer common question about testing and how they fit into the testing pyramid. 
 
-## Part One: What is the Testing Pyramid?
+## What is the Testing Pyramid?
 
 The testing pyramid is a concept originally described by Mike Cohn in his book _Succeeding with Agile_. Today there are many forms of the testing pyramid. The traditional pyramid consists of three tiers: UI (at the top), Service/API (in the middle) and Unit (at the bottom). The idea being that the majority of your tests are unit tests and your UI test suites being the smallest. 
 
@@ -46,7 +46,7 @@ But if you've ever written a lot of unit tests you may have run into some of the
 1. hard to test complicated workflows
 1. provides fake confidence in functionality (_I wrote a bunch of unit tests!?! ... but they didn't really test the thing you did in the database_)
 
-I've found that unit tests are great in certain situtations. When you want to test individual functions and algorithms. They let you quickly answer questions: does `my_cool_function(foo: any)` actually return `bar: Thing`? It doesn't make much sense to write a complete system test for this. But at the same time it depends on what `my_cool_function` is doing and where it's being used in your application's stack. This leads me to my next, and favorite, form of testing.
+I've found that unit tests are great in certain situtations. When you want to test individual functions and algorithms. They let you quickly answer questions such as does `my_cool_function(foo: any)` actually return `bar: Thing`, or is my algorithm working? It doesn't make much sense to write a complete system test for this. But at the same time it depends on what `my_cool_function` is doing and where it's being used in your application's stack. This leads me to my next, and favorite, form of testing.
 
 #### Integration Testing
 
@@ -77,11 +77,11 @@ I've noticed that this sentiment isn't shared by a lot of folks. But I've found 
 
 #### System Tests
 
-These are your slowest form but most thorough form of tests. System tests are a black box or a grey box form of testing when you interface with a running and fully provisioned system. This is great since it tests everything. But at the same time it's not ideal since you are testing everything at the same time everytime. They are also non-determinist in nature. Things fail in environments that don't get the same TLC as production and not undesrtood by stakeholders other than those that provisioned them. 
+These are your slowest form but most thorough form of tests. System tests are a black box or a grey box form of testing when you interface with a running and fully provisioned system. This is great since it tests everything. But at the same time it's not ideal since you are testing everything at the same time everytime. They are also non-determinist in nature. Things fail in environments that don't get the same TLC as production and not understood by stakeholders other than those that provisioned them. 
 
-_Why does email not work? Is it broken?!? ... No we just didn't configure it_ 
+_Why does email not work? Is it broken?!? ... No we just didn't configure it..._
 
-I've seen great amount of emphasis on system tests when many verifications can be placed lower down the stack as integration tests or unit tests. Before you write that (unnecessarily) complicated system test (e.g. a UI test or testing a RESTful api against an external service) ask yourself or your colleague if they wrote tests for the feature and what kind of tests. 
+I've seen great amount of emphasis on system tests when many verifications can be placed lower down the stack as integration tests or unit tests. Before you write that (unnecessarily) complicated system test (e.g. a UI test or testing a RESTful api against an external service) ask yourself or the developer writing the featutre if they wrote tests for the feature and what kind of tests. These sort of converations will be covered in later articles.
 
 ##### Pros
 1. Allows for expressing complex user scenarios
@@ -93,5 +93,6 @@ I've seen great amount of emphasis on system tests when many verifications can b
 1. Nondeterminstic
 1. Hard to maintain
 1. Expensive
+1. Tests external systems
 
-Later articles in this series will go into this - more unit and integration testing and less system testing.  
+Later articles in this series will go into this concept - focusing more on unit and integration testing and less system testing.
