@@ -38,6 +38,7 @@ Unit tests are great for many reasons:
 1. fast
 1. deterministic
 1. consistent 
+1. cheap
 
 ##### Cons
 But if you've ever written a lot of unit tests you may have run into some of the problems listed:
@@ -69,6 +70,7 @@ I've noticed that this sentiment isn't shared by a lot of folks. But I've found 
 1. Can mix-and-match mocks for testing complex workflows that involve external systems (more on that later in this series)
 1. Allows you to do black box, white box, or grey box testing depending on your needs
 1. Allows you to test from the user's perspective
+1. Biggest bang for your buck
 ##### Cons
 1. Integration tests vary between systems, tech stacks, and companies. Some companies write integration tests that mock out large part of systemts largely invalidating the whole point of testing
 1. Can be slow if written inefficiently (e.g. reprovisioning systems for each test)
@@ -81,7 +83,7 @@ These are your slowest form but most thorough form of tests. System tests are a 
 
 _Why does email not work? Is it broken?!? ... No we just didn't configure it_ 
 
-I've seen great amount of emphasis on system tests when many verifications can be placed lower down the stack as integration tests or unit tests. Before you write that (unnecassairly) complicated system test (e.g. a UI test or testing a RESTful api against an external service) ask yourself or your colleague if they wrote tests for the feature and what kind of tests. 
+I've seen great amount of emphasis on system tests when many verifications can be placed lower down the stack as integration tests or unit tests. Before you write that (unnecessarily) complicated system test (e.g. a UI test or testing a RESTful api against an external service) ask yourself or your colleague if they wrote tests for the feature and what kind of tests. 
 
 ##### Pros
 1. Allows for expressing complex user scenarios
@@ -92,5 +94,6 @@ I've seen great amount of emphasis on system tests when many verifications can b
 1. Slow
 1. Nondeterminstic
 1. Hard to maintain
+1. Expensive
 
 Later articles in this series will go into this - more unit and integration testing and less system testing.  
