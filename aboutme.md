@@ -2,7 +2,7 @@
 layout: page
 title: About me
 subtitle: Why you'd want to go on a date with me
-published: true
+published: false
 ---
 
 I'm Javier Luis Velasquez. I'm a software practioner. 
