@@ -13,15 +13,16 @@ date: '2020-01-09'
 
 ## Background
 
-Often when inheriting code, as I often tend to do, the first I check for is test coverage. This may be a strange place to look. But I've found that you will find out really quickly the quality of the code base by inspecting the tests. Well-written tests help developers drive architecture choices of their systems or reasonably justify them :). Tests also provide future contributors a sense of security that their changes didn't break an existing feature. 
+Often when inheriting code, as I often tend to do, the first I check for is test coverage. This may be a strange place to look. But I've found that you will find out really quickly determine the quality of the code base by inspecting the tests. _Things randomly break in production_ -> _No Tests_. What if there were tests? What if we went back and added tests for bugs? Do those things break again? 
 
-I tend to appreciate well designed systems and being able to accurately describe how my changes affect the system. Having these things provide me a sense of comfort. I want to feel comfortable making changes and I want to work in and contribute to code in a well designed system with a good foundation. 
+Well-written tests help developers drive architecture choices of their systems or reasonably justify them :). Tests also provide future contributors a sense of security that their changes didn't break an existing feature. 
 
-I'm going to assume you are a naturally curious person and question everything. Hopefully you ask questions about your systems and their tests.
+I tend to appreciate well designed systems and being able to accurately describe how my changes affect the system. Having these things provide me a sense of comfort. I want to feel comfortable making changes. Also I don't like 🐛s. 🐛s annoy customers and cost money.   
+
 
 ## The Many Ws of Testing
 
-As a part of anything I do or am asked to do, when considering tests I always try to ask the 5 ws Who, What, When, Where, Why. And no not only 5 questions:
+I'm going to assume you are a naturally curious person and question everything. Hopefully you ask questions about your systems and their tests. I probobly not as curious as you. But sometimes when considering tests I always try to think about the 5 ws Who, What, When, Where, Why. And no not only 5 questions:
 
 * Why do we need to write tests? (The most important question is why!)
 * Who am are my tests about (the user persona)?
@@ -37,7 +38,7 @@ You may be thinking that these some of questions mirror questions you would ask 
 
 This drives the answers to other questions: In order to implement the specifications that the feature is about you may need some API tests? Are you testing some complex parsing function? Are you testing some natural language processing feature? Or perhaps you are implementing an algorithm from scratch. It may not make sense to write api tests for an algorithm. Unit tests would suffice to know if the algorithtm "works" But how do you know it works for the api? Write some API tests! 
 
-## Where
+## Where and When
 Sometimes you find yourself asking or being asked: _Where are these tests going to run?_ Hopefully this is a question you are being asked when you are ramping up. You may be suprised that sometimes tests still don't run during continous integration processes.
 
 ### Continous Integration
@@ -63,4 +64,16 @@ What type of tests do you care about? One questions I've asked in interviews is 
 But do you want to deal with the _unknown costs_? Tests constantly failing and tests that require constant updates? This isn't comforting and is very expensive. People start to trust the tests less and start ignoring them. And then it happens. A nasty 🐛 gets into production. Right around that time, that overworked QA/Test Automation Engineer finally gets down to that one service with all those flaky tests and finds a bug as well 🐛. People start asking: Why didn't anyone notice this? Why did our QA person miss this?!? 
 
 ## Why
-It's good to be asking _Why_. But are we asking _why_ too late? Did you ask why didn't the code review that submitted that change didn't contain tests? Did you ask why the original feature that that change built on top of didn't have tests? Did we answer when it was acceptable to not write tests? These are questions we should be asking. The answers to these questions can be part of our _definition of done_. If this article is remotely valuable, hopefully it's done a decent job of providing the breadcrumbs to the answer to the question: _Why do need to tests_.
+
+A few questions to ask:
+Why do we need tests?
+Why does the PR not include tests?
+Why did the original feature not include tests? Did we rush it to satisfy some customer request? _Yes..._ That's the realities of business. Did the original author not value tests? _It is what it is_ But do you value tests? Does your team and organization value automated tests?
+
+It's good to be asking _Why_. But are we asking _why_ too late? 
+
+_Why is this broken?_ Maybe not the most productive question to ask.
+
+Did you ask why didn't the code review that submitted that change contain tests? Did you ask why the original feature that that change built on top of didn't have tests? Did we answer when it was acceptable to not write tests? Maybe not a why: but what is the opportunity cost of not writing tests? 
+
+These are questions we should be asking. The answers to these questions can be part of our _definition of done_. I've known teams to have agreed to having tests as a part of their code reviews. If this article has been remotely engaging, hopefully it's done a decent job of providing the breadcrumbs to the answer to the question: _Why do we need to tests?_.
