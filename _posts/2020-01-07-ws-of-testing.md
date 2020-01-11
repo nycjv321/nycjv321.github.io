@@ -13,7 +13,7 @@ date: '2020-01-09'
 
 ## Background
 
-Often when inheriting code, as I often tend to do, the first I check for is test coverage. This may be a strange place to look. But I've found that you will find out really quickly determine the quality of the code base by inspecting the tests. _Things randomly break in production_ -> _No Tests_. What if there were tests? What if we went back and added tests for bugs? Do those things break again? 
+Often when inheriting code, as I often tend to do, the first I check for is test coverage. This may be a strange place to look. But I've found that you will find out really quickly determine the quality of the code base by inspecting the tests. _Things randomly break in production_ -> _No Tests_. _What if_ there were tests? _What if_ we went back and added tests for bugs? Do those things break again? What does this do for you and the team? Maybe less time maintaining and fixing fires and more time working on new features.
 
 Well-written tests help developers drive architecture choices of their systems or reasonably justify them :). Tests also provide future contributors a sense of security that their changes didn't break an existing feature. 
 
@@ -62,6 +62,15 @@ _Oh we care about tests_
 What type of tests do you care about? One questions I've asked in interviews is how much developers care about tests. A question I haven't asked enough is what type type of tests do your developers care about? And do they really care about them? Or more importantly do they understand the value that tests bring? And testing actually means when to your stakeholders?
 
 But do you want to deal with the _unknown costs_? Tests constantly failing and tests that require constant updates? This isn't comforting and is very expensive. People start to trust the tests less and start ignoring them. And then it happens. A nasty 🐛 gets into production. Right around that time, that overworked QA/Test Automation Engineer finally gets down to that one service with all those flaky tests and finds a bug as well 🐛. People start asking: Why didn't anyone notice this? Why did our QA person miss this?!? 
+
+## Who (is going to maintain my test)
+
+This is a very interesting question that I've seen most organizations default to automation engineers who will by default write system tests - ui tests or traditional api tests. This may be news to many folks but developers can write automated tests as well. Unit tests and Integration tests are a form of automated testing 🤯. Crazy right? Check out [this](https://nycjv321.github.io/2020-01-07-testing-pyramid-services-pt1/) article on the testing pyramid that breaks down the differences. From a cost perspective, it may be easier to write system tests. Record and Playback tools are making a resurgence. But what about maintinaing them? The answer to who maintains your tests also influences your other questsions: Where are these tests ran? How often are they ran? If you let automation engineers run your tests - they might or might not run them on Jenkins on schedule. If you let automation engineers run your tests based on the schedule they choose, developers might not know about regressions until it's too late into the sprint. Why not let your developers own the automation efforts? 
+
+_but developers don't understand automation_ 
+
+I've seen very unconvincing pieces that developers shouldn't be trusted to own automation. This will be a topic for another article. But if you let (or force) your developers have to maintain automated tests you will find that they will either write tests that provide very little value or if they truly understand automation they will write tests that provide people a peace of mind alonside with their changes.
+
 
 ## Why
 
