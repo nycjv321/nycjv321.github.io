@@ -99,7 +99,7 @@ How do we make our test less flaky? I'll go into more detail on that in another 
 * Use mocking where it makes sense not where it makes things easier/quicker to implement. 
 
 #### UI Tests
-* Rely on generic css selectors (classes vs auto-generated xpaths)
+* Rely on generic css selectors (ids, names, and classes vs auto-generated xpaths)
 * Use [Page Objects or Page Components](https://martinfowler.com/bliki/PageObject.html) liberally
 
 #### API Tests
