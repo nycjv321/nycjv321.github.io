@@ -54,7 +54,8 @@ Well have you ever seen a test like this?
 
 {% highlight java linenos %}
 public void test() {
-    MyClass dependency = mock[MyClass] // MyClass is an internal class we own not an external API
+    // MyClass is an internal class we own and not an external API
+    MyClass dependency = mock[MyClass]
     when(dependency.doesStuff()).thenReturn("stuff");
     TestClass testClass = new TestClass(dependency)
     assertEquals(testClass.doesStuff(), "stuff");
