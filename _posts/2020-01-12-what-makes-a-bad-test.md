@@ -78,7 +78,7 @@ How do you define a slow test? How does your team or organization define slow? I
 
 _What is this slow test actually even doing?_
 
-In my experience many _slow_ tests are system tests or integration tests that either require optimization or are unnecessarily testing multiple things too late in the software lifecycle. In terms of expressing complex requirements, integration tests should be your goto. Integration tests are also easier to optimize becuase we can more control over what part of the app we test and how we initialize our context. For our slow tests can we move them further down the stack? Can we move our testing from system tests that take 2-5 minutes to execute down to our integration tests that only take .06 seconds to run? Or even further down to our unit tests? Does it make sense to test it at a unit level without doing some crazy mocking? Is crazy mocking worth it? More on this in another article.
+In my experience, many _slow_ tests are system tests or integration tests that either require optimization or are unnecessarily testing multiple things too late in the software lifecycle. In terms of expressing complex requirements, integration tests should be your goto. Integration tests are also easier to optimize becuase we can more control over what part of the app we test and how we initialize our context. For our slow tests can we move them further down the stack? Can we move our testing from system tests that take 2-5 minutes to execute down to our integration tests that only take .06 seconds to run? Or even further down to our unit tests? Does it make sense to test it at a unit level without doing some crazy mocking? Is crazy mocking worth it? More on this in another article.
 
 ### Flaky
 
