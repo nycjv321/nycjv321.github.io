@@ -13,7 +13,7 @@ date: '2020-01-12'
 
 So this article's title is pretty vague. What do we mean by _test_? Do we mean a manual test? Do we mean an automated ui test? Do we mean a unit test?
 
-In an Agile organization, it is understood that automation is utilized for various things including system engineering and testing. So for the purposes of this article, we are talking about automated testing unless otherwise stated. So assuming that we are _Agile_, let us think in broad terms of testing efforts in the context of an _Agile_ team. And let's define attributes and characteristics that define _bad_ tests. Once this is understood, we can start discussing what are our ideal tests.
+In an Agile organization, it is understood that automation is utilized for various things including systems engineering and testing. So for the purposes of this article, we are talking about automated testing unless otherwise stated. So assuming that we are _Agile_, let us think in broad terms of testing efforts in the context of an _Agile_ team. And let's define attributes and characteristics that define _bad_ tests. Once this is understood, we can start discussing what are our ideal tests.
 
 ## What makes a "bad" test?
 
