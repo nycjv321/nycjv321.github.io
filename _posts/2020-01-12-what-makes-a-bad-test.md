@@ -87,7 +87,7 @@ What are flaky tests? They are tests that randomly fail. Have you wrote a test a
 How do we make our test less flaky? I'll go into more detail on that in another article but here are a few tips:
 
 #### General Best Practices
-* Be [Dry isntead of Wet](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)
+* Be [Dry instead of Wet](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)
 * Don't rely on hard-coded values to do your assertions. 
 * Create data on the fly so you can test that directly vs stale data
 * Don't rely on seeded data (this becomes something to maintain)
