@@ -29,7 +29,9 @@ When I think about _bad_ tests this is what comes to mind:
 
 * Low value-add - they don't actually test anything
 * Slow
-* High Maintenance (and costly) - require constant changes (that requires investment)
+* High Maintenance
+* Expensive
+* Lack of Team Ownership
 * Non-determinstic/Flaky - randomly fail
 
 ### Low value-add
@@ -85,13 +87,27 @@ How do we make our test less flaky? I'll go into more detail on that in another 
 
 #### UI Tests
 * More generic css selectors (classes vs auto-generated xpaths)
-#### General Tests
+#### General Practices
 * Don't rely on seeded data
 * Don't rely on hard-coded collection sizes. 
 * Create data on the fly so you can test that vs stale data
 * Elimite unnecassary entropy from your tests when not the point of your tests
+* Ensure your build server and test environments are optimized to actually run your tests
+
+### Lack of Team Owernship
+
+This is point that I don't think gets discussed enough. A question to ask is who owns your tests? Do you own the tests? Does your super smart team member own the tests? Does QA own the tests? Do the developers own the tests? Most importantly... does the team own the tests? 
+
+In many organization's I've worked with I've seen that test owership is either poorly defined or that tests are owned by particular individuals or isolated teams. While it's good that someone wants ownership of your testing efforts. I always wonder if the ownership is actually counterproductive to the team's efforts? Instead of understanding your testing efforts, does your team depend on one person or a team for test results? How does this affect your feedback loop? Is your team waiting weeks, waiting a week, or a few days? Or is your test feedback immediate? Are QA resources free to test other things? Work on new tests? Free to do exploratory testing? Or are they heads down "writing tests"? Did your developers write tests Is QA and the development team duplicating testing efforts? 
+
+_What if_ the team collectivelly owned your tests? And your developers collaborated with QA in the automated testing efforts? What if they broke down where they tested and what was tested?  What if feedback was immediate and a part of your build process? 
+
+What is the value proposition in your current process? What value position would your organization value?
+
+### High Maintenance
 
 
-### High Maintenance & Costly
+
+### Expensive
 
 
