@@ -149,16 +149,16 @@ Does your team view implementing testing an investment or a cost first? Is it bo
 
 ## Ok... Enough about the bad tests! Tell me about the good tests
 
-With the above in mind, what do you consider a good test? Where do your good tests end up? What about your bad tests? Do all [tests go to test heaven](https://en.wikipedia.org/wiki/All_Dogs_Go_to_Heaven)? In your organization you should have a SME on testing and automated testing and/or team leads with experience that included software practices that embraced developer testing and exploration to ensure testing is properly utilized throughout your SDLC. The first steps to embracing  battle-tested and battle-proven approaches towards software testing is:
+With the above in mind, what do you consider a good test? Where do your good tests end up? What about your bad tests? Do all [tests go to test heaven](https://en.wikipedia.org/wiki/All_Dogs_Go_to_Heaven)? In your organization you should have a SME on testing and automated testing and/or team leads with experience that included software practices that embraced developer testing and exploration to ensure testing is properly utilized throughout your SDLC. The first steps to embracing industry-standards and best paractices towards software testing is:
 1. Understanding your organization's needs
 1. Understanding where the organization is currently at
 1. Identifying the steps needed to achieve your organization's needs. 
 
-These steps may be very complicated and involved. Some of this may be a culture thing as opposed to a _right tool for the job_ thing.
+These steps may be very complicated and involved. Some of this may be a culture thing as opposed to a _right tool for the job_ type-of-thing.
 
 _Individuals and interactions over processes and tools_
 
-Do you recongize where that's [from](https://agilemanifesto.org/)? While there are a thousands and more companies selling you the latest and greatest tools, what about the individuals and interactions in your organization? Are you empowering your colleagues to foster the culture to promote high-value add activities including testing in your SDLC?
+Do you recongize where that's [from](https://agilemanifesto.org/)? Instead of purchasing the latest and greatest tools for your organization and relying on that to improve process, what about the individuals and interactions in your organization? Are you empowering your colleagues to foster the culture to promote high-value add activities including testing in your SDLC?
 
 A future article will go over reducing the costs associated with "bad" tests, maximizing your ROI on your tests, and understanding the _biggest bang for your buck_ when approaching automated testing. 
 
