@@ -1,7 +1,7 @@
 ---
 layout: post
 title: What makes a bad test?
-subtitle: Identifiying smells in your tests
+subtitle: Identifiying smells in your testing strategy
 tags:
   - tests
 comments: false
