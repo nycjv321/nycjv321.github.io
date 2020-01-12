@@ -149,7 +149,7 @@ Does your team view implementing testing an investment or a cost first? Is it bo
 
 ## Ok... Enough about the bad tests! Tell me about the good tests
 
-With the above in mind, what do you consider a good test? Where do your good tests end up? What about your bad tests? Do all [tests go to test heaven](https://en.wikipedia.org/wiki/All_Dogs_Go_to_Heaven)? In your organization you should have a SME on testing and automated testing and/or team leads with experience that included software practices that embraced developer testing and exploration to ensure testing is properly utilized throughout your SDLC. The first steps to good testing strategies is:
+With the above in mind, what do you consider a good test? Where do your good tests end up? What about your bad tests? Do all [tests go to test heaven](https://en.wikipedia.org/wiki/All_Dogs_Go_to_Heaven)? In your organization you should have a SME on testing and automated testing and/or team leads with experience that included software practices that embraced developer testing and exploration to ensure testing is properly utilized throughout your SDLC. The first steps to embracing  battle-tested and battle-proven approaches towards software testing is:
 1. Understanding your organization's needs
 1. Understanding where the organization is currently at
 1. Identifying the steps needed to achieve your organization's needs. 
