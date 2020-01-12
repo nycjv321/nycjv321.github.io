@@ -158,7 +158,7 @@ These steps may be very complicated and involved. Some of this may be a culture 
 
 _Individuals and interactions over processes and tools_
 
-Do you recongize where that's [from](https://agilemanifesto.org/)? Instead of purchasing the latest and greatest tools for your organization and relying on that to improve process, what about the individuals and interactions in your organization? Are you empowering your colleagues to foster the culture to promote high-value add activities including testing in your SDLC?
+Do you recognize where that's [from](https://agilemanifesto.org/)? Instead of purchasing the latest and greatest tools for your organization and relying on that to improve process, what about the individuals and interactions in your organization? Are you empowering your colleagues to foster the culture to promote high-value add activities including testing in your SDLC?
 
 A future article will go over reducing the costs associated with "bad" tests, maximizing your ROI on your tests, and understanding the _biggest bang for your buck_ when approaching automated testing. 
 
