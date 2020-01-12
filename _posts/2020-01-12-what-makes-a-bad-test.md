@@ -72,7 +72,7 @@ Some of the following talking points contribute to idea of understanding the val
 
 ### Slow
 
-_Slow_ is a relative term. It depends on the test, the team, and the organization. For some folks, a unit test that takes 100ms might be considered slow while a system test that takes 100ms is considered incredible fast. But a test of any form that takes 5 minutes is considered slow vs for example 2 minutes. What about 500 integration tests that take 5 minutes to run (0.6 seconds per test) vs 500 system tests that each take 2 minutes to execute? How fast (or how slow) is that test suite? What about 1000 tests?
+_Slow_ is a relative term. It depends on the test, the team, and the organization. For some teams, a unit test that takes 100ms might be considered slow while a system test that takes 100ms is considered incredible fast. But a test of any form that takes 5 minutes is considered slow vs for example 2 minutes. What about 500 integration tests that take 5 minutes to run (0.6 seconds per test) vs 500 system tests that each take 2 minutes to execute? How fast (or how slow) is that test suite? What about 1000 tests?
 
 How do you define a slow test? How does your team or organization define slow? Is slow acceptable? When is slow unacceptable? Is slow acceptable when we are debugging that test locally? Or is unacceptable when monitoring the build server? Is slow acceptable while implementing them vs maintining them? 
 
