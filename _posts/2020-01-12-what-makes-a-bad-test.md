@@ -50,7 +50,7 @@ _depend on_
 
 _Can we depend on our tests? Should we depend on our tests?_
 
-Well have you ever seen a test like this?
+Have you ever seen a test like this?
 
 {% highlight java linenos %}
 public void testMyClassDoesStuff() {
@@ -62,7 +62,7 @@ public void testMyClassDoesStuff() {
 }
 {% endhighlight %}
 
-Can we depend on this code to tell us how `MyClass` functions? No. This is because we mocked out `MyClass`. This is a very simple example at a very micro-view of our potential codebase. How does this your codebase but at the macro level? Does your codebase have tests for all of your `MyClass`es where it makes sense? 
+Can we depend on this code to tell us how `MyClass` functions? No. This is because we mocked out `MyClass`. This is a very simple example at a very micro-view of our potential codebase. How does this look like in your codebase but at the macro level? Does your codebase have tests for all of your `MyClass`es where it makes sense? 
 
 What are the value-add of your tests? Can you say that you currently _depend on_ your tests?
 
