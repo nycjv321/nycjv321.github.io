@@ -131,7 +131,7 @@ Tests that are hard to read present a few problems:
 
 * People may confuse an actual requirement hidden in obsecure test setup/design and accidently delete meaningful and well-intentioned tests or worse yet refactor a test to pass and no longer capture the original intent of the test
 * People spend more time reverse engineering a test's design and intent vs updating tests based on updates requirements
-* People accept hard-to-read as normal (¯\_(ツ)_/¯) and copy-paste not fully understood code elsewhere instead of properly deconstructing it's true intentions
+* People accept hard-to-read as normal (¯\\_(ツ)_/¯) and copy-paste not fully understood code elsewhere instead of properly deconstructing it's true intentions
 
 ### Expensive
 
