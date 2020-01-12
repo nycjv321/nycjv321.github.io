@@ -64,7 +64,7 @@ public void test() {
 
 Can we depend on this code to tell us how `MyClass` functions? No. This is because we mocked out `MyClass`. This is a very simple example at a very micro-view of our potential codebase. How does this your codebase but at the macro level? Does your codebase have tests for all of your `MyClass`es where it makes sense? 
 
-What are the value-add of your tests? Can you say that you currently `depend on` your tests?
+What are the value-add of your tests? Can you say that you currently _depend on_ your tests?
 
 In order to be able to depend on tests they need to be high value add. _How do we do this?_ 
 
