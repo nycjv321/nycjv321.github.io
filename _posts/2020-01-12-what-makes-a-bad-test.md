@@ -120,7 +120,7 @@ What is the value proposition of your current testing process(es)? What is your 
 
 ### High Maintenance
 
-Not going to talk about this much. But if you write a test and you find yourself having to revisit it outside of changing requriements perhaps there is a problem. Maintenance is tied to Flakiness. The less flaky your tests are the less maintenance you will have to do on them. That being said, flakiness isn't the only component of high or unnecassary maintenance. Good design is also critical. Did a field change and now you have to update 30 tests? Are you abstracting your [APIs](https://en.wikipedia.org/wiki/Application_programming_interface) in such a way that changes are minimal and related to functional requirements vs having to update tests because are having to do refactoring each time something changes? Are you following [SOLID principals](https://en.wikipedia.org/wiki/SOLID)?
+Not going to talk about this much. But if you write a test and you find yourself having to revisit it outside of changing requriements perhaps there is a problem. Maintenance is tied to Flakiness. The less flaky your tests are the less maintenance you will have to do on them. That being said, flakiness isn't the only component of high or unnecassary maintenance. Good design is also critical. Did a field change and now you have to update 30 tests? Are you abstracting your [APIs](https://en.wikipedia.org/wiki/Application_programming_interface) in such a way that changes are minimal and related to functional requirements vs having to update tests because are having to do refactoring each time something changes? Are you following [SOLID principles](https://en.wikipedia.org/wiki/SOLID)?
 
 #### A note about refactoring
 
