@@ -42,7 +42,7 @@ Does this ring a 🔔?
 
 Tests and the act of testing should be high value-adding activity. Otherwise, why waste your time doing them? Tests should enable you and your team to know that your code works as advertised. Now there are different ways to incoporate tests into your SDLC.
 
-One measure of a scrum team's productivity is its velocity. And one of the things that affects velocity is handling the unknowns that come up during a sprint. This would include bugs found by your tests and production bugs. One of the things that should be a discussion point for your retrospectives (or Kaizen if you practice Kanban) is: how do we limit these unknowns and concerns and regressions found by QA or potentially as 🐛s by your customers? Handling unknowns is a topic for another day. 
+One measure of a scrum team's productivity is its velocity. And one of the things that affects velocity is handling the unknowns that come up during a sprint. This would include issues found by QA and worse: production 🐛. One of the things that should be a discussion point for your retrospectives (or Kaizen if you practice Kanban) is: how do we limit these unknowns and concerns and regressions found by QA or potentially as 🐛s by your customers? Handling unknowns is a topic for another day. 
 
 We can limit regressions if we have test suites that we can _depend on_ and test suites that run as a part of feedback loop that matches the needs of your organization's velocity. 
 
