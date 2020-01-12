@@ -143,7 +143,7 @@ Personally, I've always found that it's hard to quantify the true costs of your 
 * Costs of Regressions
 * Costs of Re-Occuring Regressions
 
-Are these all costs? Are all these costs required? You should be probobly be looking at some of these as investments first and then consider the costs. Everything has a cost. But not everything needs an investment. It is defintly possible to invest too much into your testing or misinvest into your testing processes.
+Are these all costs? Are all these costs required? You should be probobly be looking at some of these as investments first and then consider the costs. Everything has a cost. But not everything needs an investment. It is definitely possible to invest too much into your testing or misinvest into your testing processes.
 
 Does your team view implementing testing an investment or a cost first? Is it both? In that list above do you see any costs  that can be avoided or reduced? Are these costs that your team currently have? Are these costs understood or even discussed by your team members? Are the costs of your testing strategy been something your team has agreed to? Are there costs that your team is working on reducing them (e.g. adding missing regression, reducing execution time)? Does your team realize the return on investment on testing? Or is the return on investment diminished based on other things (e.g. maintinance or weeklong or more feedback loops).
 
