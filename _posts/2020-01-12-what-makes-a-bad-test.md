@@ -116,7 +116,7 @@ In many organization's I've worked with I've seen that test owership is either p
 
 _What if_ the team collectivelly owned your tests? And your developers collaborated with QA in the automated testing efforts? What if they broke down where they tested and what was tested?  What if feedback was immediate and a part of your build process? 
 
-What is the value proposition in your current process? What value position would your organization prefer?
+What is the value proposition of your current process? What is your team's and organization's ideal value position?
 
 ### High Maintenance
 
