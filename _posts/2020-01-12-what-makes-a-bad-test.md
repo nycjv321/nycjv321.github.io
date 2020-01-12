@@ -86,14 +86,7 @@ What are flaky tests? They are tests that randomly fail. Have you wrote a test a
 
 How do we make our test less flaky? I'll go into more detail on that in another article but here are a few tips:
 
-#### UI Tests
-* Rely on generic css selectors (classes vs auto-generated xpaths)
-* Use [Page Objects or Page Components](https://martinfowler.com/bliki/PageObject.html) liberally
-
-#### API Tests
-* Don't hard code message assertions unless you are testing in the same code base as the messages
-
-#### General Practices
+#### General Best Practices
 * Be [Dry isntead of Wet](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)
 * Don't rely on hard-coded values to do your assertions. 
 * Create data on the fly so you can test that directly vs stale data
@@ -104,6 +97,14 @@ How do we make our test less flaky? I'll go into more detail on that in another 
 * Swap out flaky dependencies with test-friendly implementations and test flaky dependencies in isolation or have their idiosyncrasies documented and understood.
 * Don't rely on system testing when you can write unit or interation tests instead.
 * Use mocking where it makes sense not where it makes things easier/quicker to implement. 
+
+#### UI Tests
+* Rely on generic css selectors (classes vs auto-generated xpaths)
+* Use [Page Objects or Page Components](https://martinfowler.com/bliki/PageObject.html) liberally
+
+#### API Tests
+* Don't hard code message assertions unless you are testing in the same code base as the messages
+
 
 ### Lack of Team Ownership
 
