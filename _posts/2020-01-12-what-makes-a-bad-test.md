@@ -40,7 +40,7 @@ Arguablly, all the things listed in the above section would make a test low-valu
 
 Does this ring a 🔔? 
 
-Tests and the act of testing should be high value-adding activity. Otherwise why waste your time doing them? Tests should enable you and your team to know that your code works as advertised. Now there are different ways to incoporate tests into your SDLC.
+Tests and the act of testing should be high value-adding activity. Otherwise, why waste your time doing them? Tests should enable you and your team to know that your code works as advertised. Now there are different ways to incoporate tests into your SDLC.
 
 One measure of a scrum team's productivity is its velocity. And one of the things that affects velocity is handling the unknowns that come up during a sprint. This would include bugs found by your tests and production bugs. One of the things that should be a discussion point for your retrospectives (or Kaizen if you practice Kanban) is: how do we limit these unknowns and concerns and regressions found by QA or potentially as 🐛s by your customers? Handling unknowns is a topic for another day. 
 
