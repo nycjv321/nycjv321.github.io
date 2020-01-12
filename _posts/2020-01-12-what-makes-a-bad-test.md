@@ -89,8 +89,10 @@ How do we make our test less flaky? I'll go into more detail on that in another 
 #### UI Tests
 * Rely on generic css selectors (classes vs auto-generated xpaths)
 * Use [Page Objects or Page Components](https://martinfowler.com/bliki/PageObject.html) liberally
+
 #### API Tests
 * Don't hard code message assertions unless you are testing in the same code base as the messages
+
 #### General Practices
 * Be [Dry isntead of Wet](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)
 * Don't rely on hard-coded values to do your assertions. 
