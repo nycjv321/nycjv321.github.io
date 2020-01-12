@@ -53,12 +53,12 @@ _Can we depend on our tests? Should we depend on our tests?_
 Well have you ever seen a test like this?
 
 {% highlight java linenos %}
-public void test() {
+public void testMyClassDoesStuff() {
     // MyClass is an internal class we own and not an external API
     MyClass dependency = mock[MyClass]
-    when(dependency.doesStuff()).thenReturn("stuff");
+    when(dependency.doesStuff()).thenReturn("works!");
     TestClass testClass = new TestClass(dependency)
-    assertEquals(testClass.doesStuff(), "stuff");
+    assertEquals(testClass.doesStuff(), "works!");
 }
 {% endhighlight %}
 
