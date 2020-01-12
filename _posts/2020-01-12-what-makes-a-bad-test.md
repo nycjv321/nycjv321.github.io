@@ -58,7 +58,7 @@ public void testMyClassDoesStuff() {
     MyClass dependency = mock[MyClass]
     when(dependency.doesStuff()).thenReturn("works!");
     TestClass testClass = new TestClass(dependency)
-    assertEquals(testClass.methodThatDoendsOnDoesStuff(), "works!");
+    assertEquals(testClass.methodThatDopendsOnDoesStuff(), "works!");
 }
 {% endhighlight %}
 
