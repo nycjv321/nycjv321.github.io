@@ -15,7 +15,7 @@ So this article title was pretty vague. What do we mean by _test_? Do we mean a 
 
 Good question!
 
-Let's step back and define a test. One definition that I found quiet suiting for purposes from [merriam-webster](https://www.merriam-webster.com/dictionary/test) is 
+Let's step back and define a test. One definition that I found quiet suiting for purposes from [Merriam-Webster](https://www.merriam-webster.com/dictionary/test) is 
 
 _the procedure of submitting a statement to such conditions or operations as will lead to its proof or disproof or to its acceptance or rejection_.
 
@@ -106,8 +106,24 @@ What is the value proposition in your current process? What value position would
 
 ### High Maintenance
 
+Not going to talk about this much. But if you write a test and you find yourself having to revisit it outside of changing requriements perhaps there is a problem. Maintinance is tied to Flakiness. The less flaky your tests are the less maintenance you will have to do on them. Flakiness isn't the only component of maintenance. Did a field change and now you have to update 30 tests? Are you abstracting your APIs interactions in such a way that changes are minimal and related to functional requirements vs having to update tests because are having to do refactoring?
 
+#### A note about refactoring
+
+Good tests should help you drive your development process. Perhaps you practive TDD or some variation of it like ATDD or BDD. Refactoring during test creation is expected and abnormal otherwise. Tests allow you to question design decisions and requirements. It may take a few iterations, but tests will always result in higher quality code. That being said if you are having to constantly refactor tests with multiple requirements perhaps your missing an abstraction to simplify complexity. 
 
 ### Expensive
+
+Personally, I've always found that it's hard to quantify the costs of your tests. I think there are a lot of things to consider when it comes to costs and ROI:
+
+* Costs to Implement
+* Costs to Run
+* Cost to Maintain
+* Costs of regressions
+* Costs of reoccuring regressions
+
+Are all these costs required? Are these all costs? You should be probobly be looking at some of these as investments first and then consider the costs. Everything has a cost. But not everything needs an investment. It is possible to invest too much into your testing. 
+
+Does your team view implementing testing an investment or a cost first? Is it both? In that list above do you see any costs  that can be avoided or reduced? Are these costs that your team currently have? Are these costs understood or even discussed by your team members? Are the costs of your testing strategy been something your team has agreed to? Are there costs that your team is working on reducing them (e.g. adding missing regression, reducing execution team)?
 
 
