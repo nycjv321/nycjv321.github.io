@@ -1,6 +1,6 @@
 ---
 layout: post
-title: What makes a good or bad test?
+title: What makes a bad test?
 subtitle: Identifiying smells in your tests
 tags:
   - tests
@@ -11,17 +11,15 @@ date: '2020-01-12'
 
 ## What do we mean by a "test"?
 
-So this article title was pretty vague. What do we mean by _test_? Do we mean a manual test? Do we mean an automated ui test? Do we mean a unit test?
+So this article's title is pretty vague. What do we mean by _test_? Do we mean a manual test? Do we mean an automated ui test? Do we mean a unit test?
 
 First, let's step back and define a test. One definition that I found, quiet suiting for us as software practioners, from [Merriam-Webster](https://www.merriam-webster.com/dictionary/test) is 
 
 _the procedure of submitting a statement to such conditions or operations as will lead to its proof or disproof or to its acceptance or rejection_.
 
-In an Agile organization, focus is point on automation and utilizing it for various things including tests. For the purposes of this article we are talking about automated testing unless otherwise stated. So considering that we are _Agile_, let us think broad terms in the context of an agile team. And let's define attributes and characteristics that define _good_ tests and _bad_ tests. 
+In an Agile organization, focus is point on automation and utilizing it for various things including tests. So for the purposes of this article, we are talking about automated testing unless otherwise stated. So assuming that we are _Agile_, let us think broad terms in the context of an agile team. And let's define attributes and characteristics that define _bad_ tests. Once this is understood we can start discussing what are our ideal tests.
 
-## What makes a good test?
-
-So what exactly makes a good test? Instead of discussing "good" tests, let us instead talk about the bad things that can make or break a test. This will incentivise us to think about _ideal_ tests.
+## What makes a "bad" test?
 
 When I think about _bad_ tests this is what comes to mind:
 
@@ -32,7 +30,7 @@ When I think about _bad_ tests this is what comes to mind:
 * Lack of Team Ownership
 * Non-determinstic/Flaky - randomly fail
 
-Let's try and explain what exactly this means and some of the ways of addressing these characteristics.
+Let me try and explain what exactly this means and some of the ways of addressing these characteristics.
 
 ### Low value-add
 
@@ -41,20 +39,22 @@ How do we define _low value-add_? From a business point of view I define low-val
 Arguablly, all the things in the above section would make a test low value. But let's consider the actual intent of the test, its implementation, what's it's trying to do. There are a few things that always stick out to me. These include (but are not limited to):
 
 * Not actually invoking the code that your are testing or claim to be testing
-* Relying on Mocks
-* Very poor defined assertions (`assertEquals(myThing.size(), 1)` or `assertNotNull(myThing)`);
+* Overly relying on Mocks
+* Very poor defined assertions (`assertEquals(myThing.size(), 17)` or `assertNotNull(myThing)`);
 
 Does this ring a 🔔? 
 
 Tests and the act of testing should be high value-adding activity. Otherwise why waste your time doing them? Tests should enable you and your team to know that your code works as advertised. Now there are different ways to incoporate tests into your SDLC.
 
-One measure of a scrum team's productivity is it's velocity. And one of the things that affects velocity is handling the unknowns that come up during a sprint. This would include bugs found by your tests and production bugs. One of the things that should be a discussion point for your retrospectives (or Kaizen's if you practice Kanban) is: How do we limit these unknowns and regressions found by QA or potentially as 🐛s by your customers? Handling unknowns is a topic for another day. We can limit regressions if we have test suites that we can _depend on_ and test suites that run as a part of feedback loop that matches the needs of your organization's velocity. 
+One measure of a scrum team's productivity is it's velocity. And one of the things that affects velocity is handling the unknowns that come up during a sprint. This would include bugs found by your tests and production bugs. One of the things that should be a discussion point for your retrospectives (or Kaizen if you practice Kanban) is: How do we limit these unknowns and concerns and regressions found by QA or potentially as 🐛s by your customers? Handling unknowns is a topic for another day. 
+
+We can limit regressions if we have test suites that we can _depend on_ and test suites that run as a part of feedback loop that matches the needs of your organization's velocity. 
 
 _depend on_
 
-Can we depend on our tests? Should we depend on our tests?
+_Can we depend on our tests? Should we depend on our tests?_
 
-Well have you haver seen a test like this?
+Well have you ever seen a test like this?
 
 {% highlight java linenos %}
 public void test() {
@@ -65,19 +65,19 @@ public void test() {
 }
 {% endhighlight %}
 
-Can we depend on this code to tell us how `MyClass` functions? No. This is because we mocked out `MyClass`. This is a very simple example at a very micro-view of our potential code. How does this look at the macro level? Does your codebase have tests for all of your `MyClass`es where it makes sense? 
+Can we depend on this code to tell us how `MyClass` functions? No. This is because we mocked out `MyClass`. This is a very simple example at a very micro-view of our potential codebase. How does this your codebase but at the macro level? Does your codebase have tests for all of your `MyClass`es where it makes sense? 
 
 What are the value-add of your tests? Can you say that you currently `depend on` your tests?
 
-In order to be able to depend on tests they need to be high value add. _How do we do this?_ T
+In order to be able to depend on tests they need to be high value add. _How do we do this?_ 
 
 Some of the following talking points contribute to idea of understanding the value-add proposition of your tests. If you have flaky, slow, and high haintenance tests, they might not be high value add even if they test all if the `MyClass`es in your codebase and provide extensive regression coverage. 
 
 ### Slow
 
-`Slow` is a relative term. It depends on the team and the organization. For some folks, a unit test that takes 100ms might be considered slow while a system test that takes 100ms is considered incredible fast. But a test of any form that takes 5 minutes is considered slow vs for example 2 minutes. What about 500 integration tests that take 5 minutes to run (0.6 seconds per test) vs 500 system tests that each take 2 minutes toe execute? How fast (or how slow) is that test suite?  
+`Slow` is a relative term. It depends on the team and the organization. For some folks, a unit test that takes 100ms might be considered slow while a system test that takes 100ms is considered incredible fast. But a test of any form that takes 5 minutes is considered slow vs for example 2 minutes. What about 500 integration tests that take 5 minutes to run (0.6 seconds per test) vs 500 system tests that each take 2 minutes to execute? How fast (or how slow) is that test suite?  
 
-How do you define a slow test? How does your team or organization define slow? Is slow acceptable? When is slow unacceptable? Is slow acceptable when we are debugging that test locally? Or is unacceptable when monitoring the build server? Can we make this test quicker? .... 
+How do you define a slow test? How does your team or organization define slow? Is slow acceptable? When is slow unacceptable? Is slow acceptable when we are debugging that test locally? Or is unacceptable when monitoring the build server? Is slow acceptable while implementing them vs maintining them? Can we make this test quicker? .... 
 
 _What is this slow test actually even doing?_
 
@@ -85,7 +85,7 @@ In my experience most _slow_ tests are system tests or integration tests that ei
 
 ### Flaky
 
-What are flaky tests? They are tests that randomly fail. Have you wrote a test and it passes locally. But it fails on the build server immediately? Or on the build server a weeks later? But it passes locally? Or it fails remotely on the server but only occasionally or right before a release cut-off window? 
+What are flaky tests? They are tests that randomly fail. Have you wrote a test and it passes locally but it fails on the build server immediately? Or on the build server a weeks later? But it passes locally?!? Or it fails remotely on the server but only occasionally or right before a release cut-off window? 
 
 How do we make our test less flaky? I'll go into more detail on that in another article but here are a few tips:
 
@@ -96,13 +96,14 @@ How do we make our test less flaky? I'll go into more detail on that in another 
 * Don't hard code message assertions unless you are testing in the same code base as the messages
 #### General Practices
 * Be [Dry isntead of Wet](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)
-* Don't rely on hard-coded things to do your assertions. 
+* Don't rely on hard-coded values to do your assertions. 
 * Create data on the fly so you can test that directly vs stale data
-* Don't rely on seeded data
-* Elimite unnecassary entropy from your tests when not the point of your tests
+* Don't rely on seeded data (this becomes something to maintain)
+* Eliminate unnecassary entropy from your tests when not the point of your tests
 * Ensure your build server and test environments are optimized to actually run your tests
 * Swap out flaky dependencies with test-friendly implementations and test flaky dependencies in isolation or have their idiosyncrasies documented and understood.
 * Don't rely on system testing when you can write unit or interation tests.
+* Use mocking where it makes sense not where it makes things easier/quicker to implement
 
 ### Lack of Team Ownership
 
@@ -114,7 +115,7 @@ In many organization's I've worked with I've seen that test owership is either p
 
 _What if_ the team collectivelly owned your tests? And your developers collaborated with QA in the automated testing efforts? What if they broke down where they tested and what was tested?  What if feedback was immediate and a part of your build process? 
 
-What is the value proposition in your current process? What value position would your organization value?
+What is the value proposition in your current process? What value position would your organization prefer?
 
 ### High Maintenance
 
@@ -124,9 +125,16 @@ Not going to talk about this much. But if you write a test and you find yourself
 
 Good tests should help you drive your development process. Perhaps you practive TDD or some variation of it like ATDD or BDD. Refactoring during test creation is expected and abnormal otherwise. Tests allow you to question design decisions and requirements and reaffirm them. It may take a few iterations, but utilizing testing practices will always result in higher quality code. That being said if you are having to constantly refactor tests with multiple requirements perhaps your missing an abstraction to simplify complexity. 
 
+#### A note on readibility
+Tests that are hard to read present a few problems:
+
+* People may confuse an actual requirement hidden in obsecure test setup/design and accidently delete meaningful and well-intentioned tests or worse yet refactor a test to pass and no longer capture the original intent of the test
+* People spend more time reverse engineering test design and purpose vs updating tests based on updates requirements
+* People accept hard-to-read as normal (¯\_(ツ)_/¯) and copy-paste this code elsewhere instead of properly deconstructing it's true intentions
+
 ### Expensive
 
-Personally, I've always found that it's hard to quantify the costs of your tests. I think there are a lot of things to consider when it comes to costs and ROI:
+Personally, I've always found that it's hard to quantify the true costs of your tests. I think there are a lot of things to consider when it comes to costs and ROI:
 
 * Costs to Implement
 * Costs to Run
@@ -134,8 +142,18 @@ Personally, I've always found that it's hard to quantify the costs of your tests
 * Costs of regressions
 * Costs of reoccuring regressions
 
-Are all these costs required? Are these all costs? You should be probobly be looking at some of these as investments first and then consider the costs. Everything has a cost. But not everything needs an investment. It is possible to invest too much into your testing. 
+Are these all costs? Are all these costs required? You should be probobly be looking at some of these as investments first and then consider the costs. Everything has a cost. But not everything needs an investment. It is possible to invest too much into your testing. 
 
-Does your team view implementing testing an investment or a cost first? Is it both? In that list above do you see any costs  that can be avoided or reduced? Are these costs that your team currently have? Are these costs understood or even discussed by your team members? Are the costs of your testing strategy been something your team has agreed to? Are there costs that your team is working on reducing them (e.g. adding missing regression, reducing execution team)?
+Does your team view implementing testing an investment or a cost first? Is it both?In that list above do you see any costs  that can be avoided or reduced? Are these costs that your team currently have? Are these costs understood or even discussed by your team members? Are the costs of your testing strategy been something your team has agreed to? Are there costs that your team is working on reducing them (e.g. adding missing regression, reducing execution team)? Does your team realize the return on investment? Or is the return on investment diminsihed based on other things (e.g. maintinance or weeklong or more feedback loops)
+
+## Enough about the bad tests... Tell me about the good tests
+
+With the above in mind what do you consider a good test? Where do your good tests end up? What about your tests? Do all [tests go to dog heaven](https://en.wikipedia.org/wiki/All_Dogs_Go_to_Heaven)? In your organization you should have a SME on tests or empower people with the expertise to ensure testing is properly utilized in your SDLC. The first steps are questioning and understanding where your organization's need, where they are currently at, and identifying the steps needed to get there. These steps may be very complicated and involved. 
+
+_Individuals and interactions over processes and tools_
+
+Do you recongize where that's [from](https://agilemanifesto.org/)? While there are a thousand and one companies selling you the latest and greatest tools, what about the individuals and interactions in your organization? Are you empowering your colleagues to foster the culture to promote high-value add activities including testing in your SDLC?
+
+A future article will go over reducing the costs associated with "bad" tests, maximizing your ROI on your tests, and understanding the _biggest bang for your buck_ when approaching automated testing. 
 
 
