@@ -124,7 +124,7 @@ Not going to talk about this much. But if you write a test and you find yourself
 
 #### A note about refactoring
 
-Good tests should help you drive your development process. Perhaps you practice TDD or some variation of it like ATDD or BDD. Refactoring during test creation is expected and abnormal otherwise. Tests allow you to question design decisions and requirements and reaffirm them. It may take a few iterations, but utilizing testing practices will always result in higher quality code. That being said if you are having to constantly refactor tests across multiple requirements perhaps your missing an abstraction to simplify essential complexity vs taking on the costs of accidental complexity. Learn more abou ["No Silver Bullet"](https://en.wikipedia.org/wiki/No_Silver_Bullet) for more insight on complexity in software development.
+Good tests should help you drive your development process. Perhaps you practice TDD or some variation of it like ATDD or BDD. Refactoring during test creation is expected and abnormal otherwise. Tests allow you to question design decisions and requirements and reaffirm them. It may take a few iterations, but utilizing testing practices will always result in higher quality code. That being said if you are having to constantly refactor tests across multiple requirements perhaps your missing an abstraction to simplify essential complexity vs taking on the costs of accidental complexity. Learn more about the ["No Silver Bullet"](https://en.wikipedia.org/wiki/No_Silver_Bullet) for more insight on complexity in software development.
 
 #### A Note on Readibility
 Tests that are hard to read present a few problems:
