@@ -68,7 +68,7 @@ What are the value-add of your tests? Can you say that you currently _depend on_
 
 In order to be able to depend on tests they need to be high-value add. _How do we do this?_ 
 
-Some of the following talking points contribute to idea of understanding the value-add proposition of your tests. If you have flaky, slow, and high haintenance tests, they might not be high-value add even if they test all if the `MyClass`es in your codebase and provide extensive regression coverage. 
+Some of the following talking points contribute to idea of understanding the value-add proposition of your tests. If you have flaky, slow, and high maintenance tests, they might not be high-value add even if they test all if the `MyClass`es in your codebase and provide extensive regression coverage. 
 
 ### Slow
 
