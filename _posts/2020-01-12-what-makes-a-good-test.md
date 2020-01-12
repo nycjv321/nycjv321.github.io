@@ -1,6 +1,6 @@
 ---
 layout: post
-title: What makes a good test?
+title: What makes a good or bad test?
 subtitle: Identifiying smells in your tests
 tags:
   - tests
@@ -17,7 +17,7 @@ First, let's step back and define a test. One definition that I found, quiet sui
 
 _the procedure of submitting a statement to such conditions or operations as will lead to its proof or disproof or to its acceptance or rejection_.
 
-So let's think in broad terms. And let's define attributes and characteristics that define _good_ tests and _bad_ tests. In an Agile organization, focus is point on automation and utilizing it for various things including tests. For the purposes of this article we are talking about automated testing unless otherwise stated.
+In an Agile organization, focus is point on automation and utilizing it for various things including tests. For the purposes of this article we are talking about automated testing unless otherwise stated. So considering that we are _Agile_, let us think broad terms in the context of an agile team. And let's define attributes and characteristics that define _good_ tests and _bad_ tests. 
 
 ## What makes a good test?
 
