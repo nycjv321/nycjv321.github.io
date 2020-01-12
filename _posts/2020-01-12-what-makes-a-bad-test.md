@@ -24,7 +24,7 @@ When I think about _bad_ tests this is what comes to mind:
 * High Maintenance
 * Expensive
 * Lack of Team Ownership
-* Non-determinstic/Flaky - randomly fail
+* Flaky
 
 Let me try and explain what exactly this means and some of the ways of addressing these problems.
 
