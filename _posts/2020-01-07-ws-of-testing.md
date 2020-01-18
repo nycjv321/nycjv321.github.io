@@ -19,10 +19,9 @@ _Things randomly break in production_ -> _No Tests_.
 
 _What if_ there were tests? _What if_ we went back and added tests for the bugs we found or keep finding in production? Would those things break again? What does this do for you and the team? Maybe less time maintaining and fixing 🔥s and more time working on new features and other value-adding activities
 
-Well-written tests help developers drive architecture choices of their systems or reasonably justify them 😄. Tests also provide future contributors a sense of security that their changes didn't break an existing feature. 
+Well-written tests help developers drive ~~architecture~~ design choices of their systems or reasonably justify them 😄. Tests also provide future contributors a sense of security that their changes didn't break an existing feature. 
 
-I tend to appreciate well-designed systems and being able to understand the changes needed and how my changes affect the system. Having these things provide me a sense of comfort. I want to feel comfortable making changes. Also I don't like 🐛s. And 🐛s annoy customers. Annoyed customers potentially costs your organization money.
-
+I tend to appreciate well-designed systems and being able to understand the changes needed and how my changes affect the system. Having these things provide me a sense of comfort. I want to feel comfortable making changes. Also I don't like 🐛s. 🐛s annoy customers. Annoyed customers potentially costs your organization money.
 
 ## The Many Ws of Testing
 
