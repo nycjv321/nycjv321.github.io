@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 5 Ws of Testing
+title: The many Ws of Testing
 subtitle: Who, What, When, Where, Why
 tags:
   - five ws
@@ -13,7 +13,7 @@ date: '2020-01-09'
 
 ## Background
 
-Often when inheriting code, as I often tend to do, the first I check for is test coverage. This may be a strange place to look. But I've found that you will find out really quickly determine the quality of the code base by inspecting the tests. _Things randomly break in production_ -> _No Tests_. _What if_ there were tests? _What if_ we went back and added tests for bugs? Do those things break again? What does this do for you and the team? Maybe less time maintaining and fixing fires and more time working on new features.
+Often when inheriting code, as I often tend to do, the first I check for is test coverage. This may be a strange place to look. But I've found that you will find out really quickly determine the quality of the code base by inspecting the tests. _Things randomly break in production_ -> _No Tests_. _What if_ there were tests? _What if_ we went back and added tests for the bugs we found or keep finding in productiotn? Would those things break again? What does this do for you and the team? Maybe less time maintaining and fixing fires and more time working on new features.
 
 Well-written tests help developers drive architecture choices of their systems or reasonably justify them :). Tests also provide future contributors a sense of security that their changes didn't break an existing feature. 
 
@@ -22,7 +22,7 @@ I tend to appreciate well designed systems and being able to accurately describe
 
 ## The Many Ws of Testing
 
-I'm going to assume you are a naturally curious person and question everything. Hopefully you ask questions about your systems and their tests. I probobly not as curious as you. But sometimes when considering tests I always try to think about the 5 ws Who, What, When, Where, Why. And no not only 5 questions:
+I'm going to assume you are a naturally curious person and question everything. Hopefully, you ask questions about your systems and their tests. I probobly not as curious as you. But sometimes when considering tests I always try to think about the 5 ws Who, What, When, Where, Why. And no not only 5 questions:
 
 * Why do we need to write tests? (The most important question is why!)
 * Who am are my tests about (the user persona)?
@@ -34,42 +34,59 @@ I'm going to assume you are a naturally curious person and question everything. 
 * Where do the tests run?  (On my machine? on your machine? On Jenkins?)?
  
 ## Who, What
-You may be thinking that these some of questions mirror questions you would ask as a part of requirements gathering. Good point! You should already have the answers to some of these: who & what. (who) User X, Y, and Z want (what) Feature A to adhere to the following specifications A, B, & C. That's the what. 
+You may be thinking that these some of questions mirror questions you would ask as a part of requirements gathering. Good point! You should already have the answers to some of these: who & what. (who) User X, Y, and Z want (what) Feature A to adhere to the following specifications A, B, & C (whats). That's the what. 
 
-This drives the answers to other questions: In order to implement the specifications that the feature is about you may need some API tests? Are you testing some complex parsing function? Are you testing some natural language processing feature? Or perhaps you are implementing an algorithm from scratch. It may not make sense to write api tests for an algorithm. Unit tests would suffice to know if the algorithtm "works" But how do you know it works for the api? Write some API tests! 
+This drives the answers to other questions: Do the specifications result in code that expresses behavior through an API? Are you implemeting an AST? Or perhaps you are implementing some obsecure algorithm from scratch. It may not make sense to write api tests for an algorithm. Unit tests would suffice to know if the algorithtm "works". But how do you know it works for the API? And how do you know that it works when you make changes? Write some API tests! 
 
 ## Where and When
-Sometimes you find yourself asking or being asked: _Where are these tests going to run?_ Hopefully this is a question you are being asked when you are ramping up. You may be suprised that sometimes tests still don't run during continous integration processes.
+Sometimes you find yourself asking or being asked: _Where are these tests going to run?_ Hopefully this is a question you are being asked when you are ramping up. You may be suprised that sometimes organizations have testst that still don't run as a part of continous integration processes.
 
 ### Continous Integration
-If your working at an _Agile_ organization, your services should have comprehensive integrations and unit tests that run as a part on some build server (e.g. Gitlab or Old Man Jenkins). The build process may include other things, for example: vulnerability scanning or code coverage. For the purposes of this article we won't really talk about that. So assuming you have some sort of automated tests: perhaps you have staged tests: unit tests & relativly quick integration tests on feature branches and more comphresnive integration tests on merge to develop? What's important is that the tests provide continous feedback as a part of their continous integration: _whoops my code break some stuff I didn't consider_ .
+If your working at an _Agile_ organization, your services should have comprehensive integrations and unit tests that run as a part on some build server (e.g. Gitlab or Old Man Jenkins). The build process may include other things, for example: vulnerability scanning or code coverage. For the purposes of this article we won't talk about that. So assuming you have some sort of automated tests: perhaps you have staged tests: unit tests & relatively quick integration tests on feature branches and more comprehensive integration tests on merge to develop? What's important is that the tests provide continous feedback as a part of their continous integration: _whoops my code break some stuff I didn't consider_ .
 
 _I didn't run the entire test suite locally... don't tell anybody about!_
 
-This feedback loop happens on a build server. Not on your machine or the machine of your really smart coworker that everyone is gushing about all the time. That being said, sometimes it worth asking when are our tests running and which tests? Continous Integration provides the following benefits:
+This feedback loop happens on a build server. Not on your machine or on the machine of your really smart coworker that everyone is gushing about all the time. That being said, sometimes it worth asking when are our tests running and which tests? Can we depend on our unit tests? Do the system tests provide a process thatt faciliates continous integration? Continous Integration provides the following benefits:
 
 * Centralized Reporting and Notications (Javier broke the build again!)
 * An automated feedback loop. Have you ever been asked to run a test suite that hasn't been ran in a while? Not fun. You should aim to ensure this feedback loop is 1) valuable and 2) quick. You lose a lot of value in finding a regression a week after it's been merged vs learning about it once you push your code. 
-* Dedicating machine to offload computation 
+* Dedicating machine to offload computation
 
 ## Costs of Skipping on Tests
-Many organizations rely on comprehensive system regression to answer very basic functional questions. System tests are slow and unreliable. And sometimes these tests are written after the fact. If you choose to rely on system regression you end up sacrificing relatively quick feedback for hours of execution, debugging, and maintainance. 
+Many organizations rely on comprehensive system regression to answer very basic functional questions. System tests are slow and unreliable. And sometimes these tests are written after the fact. If you choose to rely on system regression you end up sacrificing relatively quick feedback for hours of execution, debugging, and maintenance. 
 
-From a business point of view, you can view this as an opporuntity cost. It's easy to imeplement a feature (opportunity) and skip out on tests. But did you factor in the cost that the bugs bring either as a part of the release or subsequent release? Do you factor in the cost of losing customers because of your buggy software? Or the increased maintainance costs? This feels like a lot of cost for a small opportunity.
+From a business point of view, you can view this as an opporuntity cost. It's easy to implement a feature that provides revenue (opportunity) and skip out on tests. But did you factor in the cost that the bugs bring either as a part of the release or subsequent release - because you rushed your software out the door?  Do you factor in the cost of losing customers because of your buggy software? Or the increased maintainance costs? This feels like a lot of cost and lost revenue for a small opportunity.
 
 _Oh we care about tests_
 
 What type of tests do you care about? One questions I've asked in interviews is how much developers care about tests. A question I haven't asked enough is what type type of tests do your developers care about? And do they really care about them? Or more importantly do they understand the value that tests bring? And testing actually means when to your stakeholders?
 
-But do you want to deal with the _unknown costs_? Tests constantly failing and tests that require constant updates? This isn't comforting and is very expensive. People start to trust the tests less and start ignoring them. And then it happens. A nasty 🐛 gets into production. Right around that time, that overworked QA/Test Automation Engineer finally gets down to that one service with all those flaky tests and finds a bug as well 🐛. People start asking: Why didn't anyone notice this? Why did our QA person miss this?!? 
+But do you want to deal with the _unknown costs_? Tests constantly failing and tests that require constant updates? This isn't comforting and is very expensive. People start to trust the tests less and start ignoring them. And then it happens ... A nasty 🐛 gets into production. Right around that time, that overworked QA/Test Automation Engineer finally gets down to that one service with all those flaky tests and finds an automated testt expressing that very same 🐛. People start asking: Why didn't anyone notice this? Why did our QA person miss this?!? I encourage you to step back and evaluate when this happens and how to mitigate it. 
+
+Some bugs are inevitable. Sometimes when scaling systems act differently then testing locally. That's are the really hard problems to solve. 
+
+_💩 happens!_
+
+But what's important is addressing those issues when they happen and retrospecting on these momentst and preventing similiar issues going forward. In my experience, other bugs related to application functionality are due to 
+
+* Poor Regression Coverage
+* Vague requirements that force developers to make weird design decisions resulting in unexpected unintentional behavior
+* Poor System Design/Cohesiveness - which is something that can be seen as either a precursor or a consequence of the previous points
 
 ## Who (is going to maintain my test)
 
-This is a very interesting question that I've seen most organizations default to automation engineers who will by default write system tests - ui tests or traditional api tests. This may be news to many folks but developers can write automated tests as well. Unit tests and Integration tests are a form of automated testing 🤯. Crazy right? Check out [this](https://nycjv321.github.io/2020-01-07-testing-pyramid-services-pt1/) article on the testing pyramid that breaks down the differences. From a cost perspective, it may be easier to write system tests. Record and Playback tools are making a resurgence. But what about maintinaing them? The answer to who maintains your tests also influences your other questsions: Where are these tests ran? How often are they ran? If you let automation engineers run your tests - they might or might not run them on Jenkins on schedule. If you let automation engineers run your tests based on the schedule they choose, developers might not know about regressions until it's too late into the sprint. Why not let your developers own the automation efforts? 
+This is a very interesting question that I've seen most organizations default to non-development stakeholders who will by default write system tests - ui tests or traditional api tests. This may be news to many folks but developers can write automated tests as well. 🤯 Unit tests and Integration tests are a form of automated testing 🤯. [Crazy](https://giphy.com/explore/mind-blown) right? Check out [this](https://nycjv321.github.io/2020-01-07-testing-pyramid-services-pt1/) article on the testing pyramid that breaks down the differences. 
+
+That being said, from a cost perspective, it may be easier to write system tests. And record and Playback tools are making a resurgence. But what about maintaining them? The answer to who maintains your tests also influences your other questions: Where are these tests ran? How often are they ran? If you let QA engineers run your tests - they might or might not run them on Jenkins on schedule. If you let non-development staff run your tests based on the schedule they choose, developers might not know about regressions until it's too late into the sprint. Why not let your developers own the automation efforts and empower them to automate the trivial things? 
 
 _but developers don't understand automation_ 
 
-I've seen very unconvincing pieces that developers shouldn't be trusted to own automation. This will be a topic for another article. But if you let (or force) your developers have to maintain automated tests you will find that they will either write tests that provide very little value or if they truly understand automation they will write tests that provide people a peace of mind alonside with their changes.
+I've seen many very unconvincing articles that developers shouldn't be trusted to own automation. This will be a topic for another article. But if you:
+
+1) Hire talented developers who actually understand automation
+2) And empower them to utilize automation as a part of their job
+
+You will find that they utilize automation as one of many tools to allow your organization to deliver high quality software.
 
 
 ## Why
@@ -77,12 +94,16 @@ I've seen very unconvincing pieces that developers shouldn't be trusted to own a
 A few questions to ask:
 Why do we need tests?
 Why does the PR not include tests?
-Why did the original feature not include tests? Did we rush it to satisfy some customer request? _Yes..._ That's the realities of business. Did the original author not value tests? _It is what it is_ But do you value tests? Does your team and organization value automated tests?
+Why did the original feature not include tests? Did we rush it to satisfy some customer request? _Yes..._ That's the realities of business. Did the original author not value tests? 
+
+_It is what it is_ 
+
+But do you value tested and testable software? Does your team? Does your organization?
 
 It's good to be asking _Why_. But are we asking _why_ too late? 
 
 _Why is this broken?_ Maybe not the most productive question to ask.
 
-Did you ask why didn't the code review that submitted that change contain tests? Did you ask why the original feature that that change built on top of didn't have tests? Did we answer when it was acceptable to not write tests? Maybe not a why: but what is the opportunity cost of not writing tests? 
+Did you ask why didn't the code review that submitted that change contain tests? Did those tests provide adequate coverage in expressing the implemented requirements Did you ask why the original feature that that change built on top of didn't have tests? Did we answer when it was acceptable to not write tests? Maybe not a why: but I want to ask this: what is the opportunity cost of not writing tests? 
 
-These are questions we should be asking. The answers to these questions can be part of our _definition of done_. I've known teams to have agreed to having tests as a part of their code reviews. If this article has been remotely engaging, hopefully it's done a decent job of providing the breadcrumbs to the answer to the question: _Why do we need to tests?_.
+These are questions we should be asking. The answers to these questions can be part of our _definition of done_. I've known teams to have agreed to having automated functionaly tests as a part of their code reviews. If this article has been remotely engaging, hopefully it's done a decent job of providing the breadcrumbs to the answer to the question: _Why do we need to test?_.
