@@ -106,6 +106,6 @@ Did you ask why didn't the code review that submitted that change contain tests?
 
 These are questions we should be asking. 
 
-The answers to these questions can be part of our _definition of done_. I've known teams that have agreed to having automated functional tests as a part of their code reviews. 😎.If this article has been even remotely engaging - hopefully it's done a decent job of providing the breadcrumbs to the answer to the question: _Why do we need to test?_. 
+The answers to these questions can be part of our _definition of done_. I've known teams that have agreed to having automated functional tests as a part of their code reviews 😎. If this article has been even remotely engaging - hopefully it's done a decent job of providing the breadcrumbs to the answer to the question: _Why do we need to test?_. 
 
 In another article I will try and answer the question of how to test.
