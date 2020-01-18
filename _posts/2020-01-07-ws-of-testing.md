@@ -104,6 +104,8 @@ _Why is this broken?_ Maybe not the most productive question to ask.
 
 Did you ask why didn't the code review that submitted that change contain tests? Did those tests provide adequate coverage in expressing the implemented requirements? Did you ask why the original feature that that change built on-top of not have tests? Did we answer when it was acceptable to not write tests? Maybe not a why: but I want to ask this: what is the opportunity cost of not writing tests? 
 
-These are questions we should be asking. The answers to these questions can be part of our _definition of done_. I've known teams that have agreed to having automated functional tests as a part of their code reviews. 😎 If this article has been even remotely engaging - hopefully it's done a decent job of providing the breadcrumbs to the answer to the question: _Why do we need to test?_. 
+These are questions we should be asking. 
+
+The answers to these questions can be part of our _definition of done_. I've known teams that have agreed to having automated functional tests as a part of their code reviews. 😎.If this article has been even remotely engaging - hopefully it's done a decent job of providing the breadcrumbs to the answer to the question: _Why do we need to test?_. 
 
 In another article I will try and answer the question of how to test.
