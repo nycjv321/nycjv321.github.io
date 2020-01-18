@@ -62,7 +62,7 @@ From a business point of view, you can view this as an opporuntity cost. It's ea
 
 _Oh we care about tests_
 
-What type of tests do you care about? You may find yourself in interviews asking how much developers, and future coworkers, care about tests. It may be more productive, to insteadm, ask what type of tests do your colleagues care about? And do they really care about them?  Or more importantly do they understand the value that tests bring to the organization? And what does testing mean to your stakeholders? Alternatively, are they looking to grow their testing culture or perhaps someone to lead on growing the testing culture?
+What type of tests do you care about? You may find yourself in interviews asking how much developers, and future coworkers, care about tests. It may be more productive, to instead, ask what type of tests do your colleagues care about? And do they really care about them?  Or more importantly do they understand the value that tests bring to the organization? And what does testing mean to your stakeholders? Alternatively, are they looking to grow their testing culture or perhaps someone to lead on growing the testing culture?
 
 But do you want to deal with the _unknown costs_? Tests constantly failing and tests that require constant updates? This isn't comforting and is very expensive. People start to trust the tests less  and less, and eventualy start ignoring them. And then it happens ... A nasty 🐛 gets into production. Right around that time, that overworked QA/Test Automation Engineer finally gets down to that one service with all those flaky tests and finds an automated test expressing that very same 🐛. People start asking: Why didn't anyone notice this? Why did our QA person miss this?!? 
 
