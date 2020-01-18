@@ -13,11 +13,15 @@ date: '2020-01-09'
 
 ## Background
 
-Often when inheriting code, as I often tend to do, the first I check for is test coverage. This may be a strange place to look. But I've found that you will find out really quickly determine the quality of the code base by inspecting the tests. _Things randomly break in production_ -> _No Tests_. _What if_ there were tests? _What if_ we went back and added tests for the bugs we found or keep finding in productiotn? Would those things break again? What does this do for you and the team? Maybe less time maintaining and fixing fires and more time working on new features.
+Often when inheriting code, the first I check for is test coverage. This may be a strange place to look. But I've found that you very quickly understand the quality of the codebase by inspecting the tests. 
 
-Well-written tests help developers drive architecture choices of their systems or reasonably justify them :). Tests also provide future contributors a sense of security that their changes didn't break an existing feature. 
+_Things randomly break in production_ -> _No Tests_. 
 
-I tend to appreciate well designed systems and being able to accurately describe how my changes affect the system. Having these things provide me a sense of comfort. I want to feel comfortable making changes. Also I don't like 🐛s. 🐛s annoy customers and cost money.   
+_What if_ there were tests? _What if_ we went back and added tests for the bugs we found or keep finding in production? Would those things break again? What does this do for you and the team? Maybe less time maintaining and fixing 🔥s and more time working on new features and other value-adding activities
+
+Well-written tests help developers drive architecture choices of their systems or reasonably justify them 😄. Tests also provide future contributors a sense of security that their changes didn't break an existing feature. 
+
+I tend to appreciate well-designed systems and being able to understand the changes needed and how my changes affect the system. Having these things provide me a sense of comfort. I want to feel comfortable making changes. Also I don't like 🐛s. And 🐛s annoy customers. Annoyed customers potentially costs your organization money.
 
 
 ## The Many Ws of Testing
@@ -36,10 +40,10 @@ I'm going to assume you are a naturally curious person and question everything. 
 ## Who, What
 You may be thinking that these some of questions mirror questions you would ask as a part of requirements gathering. Good point! You should already have the answers to some of these: who & what. (who) User X, Y, and Z want (what) Feature A to adhere to the following specifications A, B, & C (whats). That's the what. 
 
-This drives the answers to other questions: Do the specifications result in code that expresses behavior through an API? Are you implemeting an AST? Or perhaps you are implementing some obsecure algorithm from scratch. It may not make sense to write api tests for an algorithm. Unit tests would suffice to know if the algorithtm "works". But how do you know it works for the API? And how do you know that it works when you make changes? Write some API tests! 
+This drives the answers to other questions: Do the specifications result in code that adds behavior expressed through an API? Are you implemeting a language recognition system? Or perhaps you are implementing some obsecure algorithm from scratch. It may not make sense to write api tests for an algorithm. Unit tests would suffice to know if the algorithtm "works". But how do you know it works for the API? And how do you know that it works when you make changes? Write some API tests! 
 
 ## Where and When
-Sometimes you find yourself asking or being asked: _Where are these tests going to run?_ Hopefully this is a question you are being asked when you are ramping up. You may be suprised that sometimes organizations have testst that still don't run as a part of continous integration processes.
+Sometimes you find yourself asking or being asked: _Where are these tests going to run?_ Hopefully this is a question you are being asked when your team is ramping up. You may be suprised that sometimes organizations have tests that still don't run as a part of continous integration processes.
 
 ### Continous Integration
 If your working at an _Agile_ organization, your services should have comprehensive integrations and unit tests that run as a part on some build server (e.g. Gitlab or Old Man Jenkins). The build process may include other things, for example: vulnerability scanning or code coverage. For the purposes of this article we won't talk about that. So assuming you have some sort of automated tests: perhaps you have staged tests: unit tests & relatively quick integration tests on feature branches and more comprehensive integration tests on merge to develop? What's important is that the tests provide continous feedback as a part of their continous integration: _whoops my code break some stuff I didn't consider_ .
