@@ -13,7 +13,7 @@ date: '2020-01-09'
 
 ## Background
 
-Often when inheriting code, the first I check for is test coverage. This may be a strange place to look. But I've found that you very quickly understand the quality of the codebase by inspecting the tests. 
+Often when inheriting code the first thing I check for is test coverage. This may be a strange place to look. But I've found that you very quickly understand the quality of the codebase by inspecting the tests. 
 
 _Things randomly break in production_ -> _No Tests_. 
 
