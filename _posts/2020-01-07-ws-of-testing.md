@@ -70,7 +70,7 @@ Some bugs are inevitable. Sometimes when scaling, systems act differently and un
 
 _💩 happens!_
 
-But what's important is addressing those issues when they happen and retrospecting on them and preventing similiar issues going forward. In my experience, other bugs related to application functionality are due to: 
+But what's important is addressing those issues when they happen and retrospecting on them and preventing similiar issues going forward. In my experience, the majority of other bugs related to application functionality are due to: 
 
 * Poor test coverage
 * Vague requirements that force developers to make weird design decisions resulting in unexpected/unintentional behavior
