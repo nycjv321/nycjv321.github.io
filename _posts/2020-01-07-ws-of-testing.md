@@ -17,7 +17,7 @@ Often when inheriting code the first thing I check for is test coverage. This ma
 
 _Things randomly break in production_ -> _No Tests_. 
 
-_What if_ there were tests? _What if_ we went back and added tests for the bugs we found or keep finding in production? Would those things break again? What does this do for you and the team? Maybe less time maintaining and fixing 🔥s and more time working on new features and other value-adding activities.
+_What if_ there were tests? _What if_ we went back and added tests for the bugs we found or keep finding in production? Would those things break again? What does this do for you and the team? Maybe less time maintaining and fighting 🔥s and more time working on new features and other value-adding activities.
 
 Well-written tests help developers drive ~~architecture~~ design choices of their systems or reasonably justify them 😄. Tests also provide future contributors a sense of security that their changes didn't break an existing feature. 
 
