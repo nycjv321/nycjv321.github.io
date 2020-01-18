@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The many Ws of Testing
+title: The Many Ws of Testing
 subtitle: Who, What, When, Where, Why
 tags:
   - five ws
