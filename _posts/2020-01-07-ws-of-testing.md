@@ -25,7 +25,7 @@ I tend to appreciate well-designed systems and being able to understand the chan
 
 ## The Many Ws of Testing
 
-I'm going to assume you are a naturally curious person and question everything. Hopefully, you ask questions about your systems and their tests. I probobly not as curious as you. But sometimes when considering tests I always try to think about the 5 ws Who, What, When, Where, Why. And no not only 5 questions:
+I'm going to assume you are a naturally curious person and question everything. Hopefully, you ask questions about your systems and their tests. I'm probobly not as curious as you. But sometimes when considering tests I always try to think about the 5 ws Who, What, When, Where, Why. And no not only 5 questions:
 
 * Why do we need to write tests? (The most important question is why!)
 * Who am are my tests about (the user persona)?
