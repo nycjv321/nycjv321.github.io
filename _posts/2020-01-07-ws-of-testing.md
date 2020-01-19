@@ -39,7 +39,7 @@ I'm going to assume you are a naturally curious person and question everything. 
 ## Who, What
 You may be thinking that these some of questions mirror questions you would ask as a part of requirements gathering. Good point! You should already have the answers to some of these: who & what. (who) User Xn wants (what) feature A to adhere to the following specifications Ax (the whats). 
 
-This drives the answers to other questions: Do the specifications result in code that adds behavior expressed through an API? Are you implemeting a language recognition system? Or perhaps you are implementing some obsecure algorithm from scratch. It may not make sense to write API tests for an algorithm. Unit tests would suffice to know if the algorithtm "works". But how do you know it works for the API? And how do you know that it, the API, still works when you make changes to it? Write some API tests! 
+This drives the answers to other questions: Do the specifications result in code that adds behavior expressed through an API? Are you implementing a language recognition system? Or perhaps you are implementing some obsecure algorithm from scratch. It may not make sense to write API tests for an algorithm. Unit tests would suffice to know if the algorithtm "works". But how do you know it works for the API? And how do you know that it, the API, still works when you make changes to it? Write some API tests! 
 
 ## Where and When
 Sometimes you find yourself asking or being asked: _Where are these tests going to run?_ Hopefully, this is a question you are being asked when your team is ramping up. You may be suprised that sometimes organizations have tests that still don't run as part of continous integration processes.
