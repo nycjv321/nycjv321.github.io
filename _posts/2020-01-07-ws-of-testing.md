@@ -58,7 +58,7 @@ This feedback loop happens on a build server. Not on your machine or on the mach
 ## Costs of Skipping on Tests
 Many organizations rely on comprehensive system regression to answer very basic functional questions. However, system tests are slow and unreliable. And sometimes these tests are written after the fact. If you choose to rely on system regression you end up sacrificing relatively quick feedback for hours of execution, debugging, and maintenance. 
 
-From a business point of view, you can view this as an opporuntity cost. It's easy to implement a feature that provides revenue (opportunity) and skip out on tests (cost). But did you factor in the cost that the bugs bring either as a part of the release or a subsequent release - because you rushed your software out the door?  Do you factor in the cost of losing customers because of your buggy software? Or the increased maintainance costs? This feels like a lot of cost and lost revenue for a small opportunity.
+From a business point of view, you can view this as an opportunity cost. It's easy to implement a feature that provides revenue (opportunity) and skip out on tests (cost). But did you factor in the cost that the bugs bring either as a part of the release or a subsequent release - because you rushed your software out the door?  Do you factor in the cost of losing customers because of your buggy software? Or the increased maintainance costs? This feels like a lot of cost and lost revenue for a small opportunity.
 
 _Oh we care about tests_
 
